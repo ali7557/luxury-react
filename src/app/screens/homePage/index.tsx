@@ -37,17 +37,17 @@ export  default function HomePage() {
         page: 1,
         limit: 4,
         order: "productViews",
-        productCollection: ProductCollection.DISH,
+        productCollection: ProductCollection.WATCHES,
       }).then((data)=>{
         console.log("Data passed here:", data);
         setPopularDishes(data);
       }).catch((err) => console.log(err));
-
+        console.log("Error fetching dishes:");
       product.getProducts({
         page: 1,
         limit: 4,
         order: "createdAt",
-        productCollection: ProductCollection.DISH,
+        productCollection: ProductCollection.WATCHES,
       }).then((data)=>{
         console.log("Data passed here:", data);
         setNewDishes(data);

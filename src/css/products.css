@@ -3,14 +3,15 @@
     position: relative;
     width: 100%;
     height: auto;
-    background: #f8f8ff;
+    background: #191945;
+   
 }
 
 .products-page .products {
     width: 100%;
     height: auto;
     display: flex;
-    background: #f8f8ff;
+  background: #0b1114;
     flex-direction: column;
 }
 
@@ -25,134 +26,150 @@
 
 /* --- HEADER / TOP TEXT --- */
 .products-page .products .top-text {
-    position: relative;
     width: 100%;
-    height: 43px;
-    margin-top: 80px;
+    margin-top: 60px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .products-page .products .top-text p {
     position: relative;
-    margin-left: 430px;
-    font-family: "Dancing Script";
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 43px;
-    color: #343434;
-}
-
-/* --- SEARCH BAR --- */
-.products-page .products .single-search-big box {
-    position: relative;
-}
-
-.products-page .products .single-search-form {
-    position: relative;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 1.1;
+    letter-spacing: 12px;
+    color: #b17015;
+    text-transform: uppercase;
+    text-align: center;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.products-page .products .single-search-input {
-    position: relative;
-    width: 225px;
-    height: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-left: 10px;
-    display: flex;
-    border: none;
-    border-radius: 10px 0px 0px 10px;
-    font-family: "GT Walsheim Pro";
-    font-size: 15px;
-    color: #4f547b;
+/* --- CENTRALIZED LUXURY CONTROL CENTER --- */
+
+.single-search-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 10px !important;
 }
 
-.products-page .products .single-button-search {
-    position: relative;
-    width: 100px;
-    height: 33px;
+/* Search Row */
+.single-search-form {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 1000px !important;       /* INCREASED from 450px to 600px to stretch the input */
+    gap: 10px !important;
+    margin-left: auto !important;  
+    margin-right: 0 !important;    
+}
+
+.single-search-input {
+    flex: 1 !important;            /* This will now take up all available extra space */
+    padding: 8px 12px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+}
+
+.single-button-search {
+    background-color: #0b1114 !important;
     color: #d7b586 !important;
-    border-radius: 18px !important;
-    background: #343434 !important;
-    display: flex;
+    padding: 0 20px !important;
+    border: none !important;
 }
 
-/* --- FILTERS --- */
-/* --- FILTER SECTION --- */
-/* --- FILTERS (Integrated your source) --- */
-.products-page .products .dishes-filter-section {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+/* 2. FILTER ROW */
+.dishes-filter-box {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 600px !important;       /* MUST MATCH the 600px above */
+    gap: 5px !important;
+    margin-left: auto !important; 
+    margin-right: 0 !important;
+    margin-top: 5px !important;
 }
 
-.products-page .products .dishes-filter-box {
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+.order {
+    flex: 1 !important;
+    padding: 6px 12px !important;
+    background-color: #d7b586 !important;
+    color: #0b1114 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
 }
 
-.products-page .products .dishes-filter-box .order {
-    margin-right: 20px;
-}
-/* --- CATEGORY SECTION --- */
-.products-page .products .list-category-section {
-  width: 100%;
-  min-height: 600px;
-  display: flex;
-  flex-direction: row;
-}
-
-
-
+/* --- FILTERS / CATEGORY NAV --- */
 .products-page .products .product-category {
     margin-top: 60px;
-    width: 50px;
-    height: auto;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-left: 0;
 }
 
 .products-page .products .category-main {
     display: flex;
-    flex-direction: column-reverse;
-    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
 }
 
-.products-page .products .category-main button {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    min-width: 40px;
-    height: 100px;
+.sub-category-list {
+    position: absolute;
+    left: calc(50% + 150px);
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeInRight 0.5s ease;
 }
 
+.sub-category-list button {
+    background: none !important;
+    border: none !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #777 !important;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+/* --- PRODUCT CARD & WRAPPER --- */
 /* --- PRODUCT CARD & WRAPPER --- */
 .products-page .products .product-wrapper {
     margin-left: 25px;
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center; /* Centers the cards */
 }
 
 .products-page .products .product-card {
-    margin-top: 40px;
-    margin-right: 24px;
+    margin: 40px 20px;
     width: 270px;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #0b1114; /* Match your dark theme */
+    padding-bottom: 20px;
+    border-radius: 10px 10px 40px 40px;
+    border: 1px solid rgba(215, 181, 134, 0.3); /* Subtle gold frame */
+    transition: transform 0.3s ease;
+}
+
+.products-page .products .product-card:hover {
+    transform: translateY(-10px);
+    border-color: #d7b586;
 }
 
 .products-page .products .product-card .product-img {
@@ -161,39 +178,38 @@
     height: 275px;
     background-size: cover;
     background-position: center;
-    border-radius: 0 50px 0 0;
+    /* Luxury Shape: Sharp top, soft bottom curve */
+    border-radius: 10px 10px 40px 40px;
 }
 
 .products-page .products .product-card .product-img .product-sale {
- position: absolute;
-margin-top: 10px;
-z-index: 100;
-width: 90px;
-height: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #ff9200;
-box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.1);
-border-radius: 25px;
-font-family: "Poppins";
-font-size: 12px;
-font-style: normal;
-font-weight: 600;
-line-height: 21px;
-color: #f8f8ff;
+    position: absolute;
+    margin: 15px;
+    z-index: 100;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Luxury Tag: Champagne Gold with dark text */
+    background: #d7b586; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0b1114; /* Dark blue/black text */
 }
 
-
-
 .products-page .products .product-img:before {
-    border-radius: 0px 50px 0px 0px;
+    border-radius: 10px 10px 40px 40px;
     content: "";
     opacity: 0;
     transition: opacity 0.5s ease;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
 
@@ -237,18 +253,26 @@ color: #f8f8ff;
 }
 
 .products-page .products .product-desc .product-title {
-    margin-top: 10px;
-    font-family: "Poppins";
+    margin-top: 15px;
+    font-family: 'Playfair Display', serif; /* Elegant, premium look */
     font-weight: 600;
     font-size: 20px;
+    color: #e4e4e4; /* Soft, readable off-white */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: color 0.3s ease; /* Smooth color change */
 }
 
+/* Hover state adds a premium "Luxury Gold" glow */
+.products-page .products .product-card:hover .product-title {
+    color: #d7b586; /* Champagne Gold */
+}
 .products-page .products .product-desc .product-desc {
     margin-top: 2px;
     font-family: "Poppins";
     font-weight: 600;
     font-size: 24px;
-    color: #e3c08d;
+    color: #d1e02ef9;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -257,6 +281,7 @@ color: #f8f8ff;
 
 /* --- BRANDS & ADDRESS --- */
 /* --- BRANDS SECTION CSS --- */
+/* Container Style */
 .brands-logo {
   width: 100%;
   background: #0b1114;
@@ -270,16 +295,58 @@ color: #f8f8ff;
   font-family: "Poppins", sans-serif;
   font-size: 36px;
   font-weight: 600;
-  color: #ffffff; 
+  color: #ffffff;
   margin-bottom: 40px;
+  text-align: center;
 }
 
-.brands-logo .brands-wrapper {
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* More space between stands */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-box {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 50px;
+  aspect-ratio: 3 / 4; /* Keeps them as "Luxury Stands" */
+  overflow: hidden;
+  border-radius: 20px 20px 50px 50px;
+  border: 2px solid #d7b586;
+  background: #1a1e22;
+}
+  
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 40px 40px; /* Matches container shape */
+}
+
+.video-box:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 20px 40px rgba(215, 181, 134, 0.3);
+}
+
+.video-box video {
+  width: 100%;.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video stays inside the box */
+}
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 40px 40px; /* Matches the container shape */
+}
+/* Responsive Grid for Tablets/Phones */
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .video-grid { grid-template-columns: 1fr; }
 }
 
 /* Restored Hover Logic */
@@ -476,4 +543,48 @@ color: #f8f8ff;
     font-size: 36px;
     line-height: 43px;
     margin-top: 40px;
+}
+
+.address {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #0b1114; /* Matches your navy theme */
+  display: flex;
+  justify-content: center;
+}
+
+.address-area {
+  width: 100%;
+  align-items: center;
+}
+
+.address-area .title {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Luxury Map Wrapper */
+.map-luxury-wrapper {
+  width: 100%;
+  max-width: 1100px; /* Wider for better visibility */
+  height: 500px;     /* Set a clear, tall height */
+  margin: 40px auto;
+  border: 3px solid #d7b586; /* Gold border */
+  border-radius: 20px;
+  padding: 5px;
+  background: #1a1e22;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.map-luxury-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  /* Dark mode filter to match your theme */
+  filter: grayscale(0.5) invert(0.9) contrast(1.2);
 }

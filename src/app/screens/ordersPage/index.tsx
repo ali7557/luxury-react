@@ -117,7 +117,7 @@ const [orderInquiry ,setOrderInquiry] = useState<OrderInquiry>({
                     ? `${serverApi}/${authMember.memberImage}`
                     : "/icons/default-user.svg" } className="order-user-avatar" alt="User" />
                 <div className="order-user-icon-box">
-                  <img src= { authMember?.memberType === MemberType.RESTAURANT
+                  <img src= { authMember?.memberType === MemberType.BRANDS
                    ? "/icons/restaurant.svg"
                    :"/icons/user-badge.svg"}
                    className="order-user-prof-img" alt="Badge" />

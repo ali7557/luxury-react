@@ -7,8 +7,8 @@ const Footers = styled.div`
   width: 100%;
   height: 590px;
   display: flex;
-  background: #343434;
-  background-size: cover;
+  background: #0b0e11; /* Dark Luxury Background */
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
 `;
 
 export default function Footer() {
@@ -20,35 +20,38 @@ export default function Footer() {
         <Stack flexDirection={"row"} sx={{ mt: "94px" }}>
           <Stack flexDirection={"column"} style={{ width: "340px" }}>
             <Box>
-              <img width={"100px"} src={"/icons/burak.svg"} />
+              {/* Replace with your new Watch Logo */}
+              <img width={"120px"} src={"/icons/logo.png"} alt="Luxury Logo" />
             </Box>
             <Box className={"foot-desc-txt"}>
-              Focusing on the gourmet Turkish breakfast as well as the youth
-              society, CZN Burak Gurme aims to bring Turkish cuisine back. CZN
-              Burak Gurme creates an illusion with its cuisine.
+              Defining precision and elegance since 2001. Our curated collection 
+              represents the pinnacle of horological artistry and timeless 
+              craftsmanship for the modern collector.
             </Box>
             <Box className="sns-context">
-              <img src={"/icons/facebook.svg"} />
-              <img src={"/icons/twitter.svg"} />
-              <img src={"/icons/instagram.svg"} />
-              <img src={"/icons/youtube.svg"} />
+              <img src={"/icons/facebook.svg"} style={{ filter: 'invert(1)' }} />
+              <img src={"/icons/twitter.svg"} style={{ filter: 'invert(1)' }} />
+              <img src={"/icons/instagram.svg"} style={{ filter: 'invert(1)' }} />
+              <img src={"/icons/youtube.svg"} style={{ filter: 'invert(1)' }} />
             </Box>
           </Stack>
+          
           <Stack sx={{ ml: "288px" }} flexDirection={"row"}>
             <Stack>
               <Box>
-                <Box className={"foot-category-title"}>Bo'limlar</Box>
+                <Box className={"foot-category-title"}>Collection</Box>
                 <Box className={"foot-category-link"}>
                   <Link to="/">Home</Link>
-                  <Link to="/products">Products</Link>
-                  {authMember && <Link to="/orders">Orders</Link>}
-                  <Link to="/help">Help</Link>
+                  <Link to="/products">Watch Gallery</Link>
+                  {authMember && <Link to="/orders">My Collection</Link>}
+                  <Link to="/help">Assistance</Link>
                 </Box>
               </Box>
             </Stack>
+            
             <Stack sx={{ ml: "100px" }}>
               <Box>
-                <Box className={"foot-category-title"}>Find us</Box>
+                <Box className={"foot-category-title"}>Boutique</Box>
                 <Box
                   flexDirection={"column"}
                   sx={{ mt: "20px" }}
@@ -57,31 +60,33 @@ export default function Footer() {
                 >
                   <Box flexDirection={"row"} className={"find-us"}>
                     <span>L.</span>
-                    <div>Downtown, Dubai</div>
+                    <div>Haeundae, Busan, KR</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>P.</span>
-                    <div>+971 4 554 7777</div>
+                    <div>+82 51 749 5555</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>E.</span>
-                    <div>devexuz@gmail.com</div>
+                    <div>concierge@luxurywatch.com</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>H.</span>
-                    <div>Visit 24 hours</div>
+                    <div>By Appointment Only</div>
                   </Box>
                 </Box>
               </Box>
             </Stack>
           </Stack>
         </Stack>
+        
         <Stack
-          style={{ border: "1px solid #C5C8C9", width: "100%", opacity: "0.2" }}
+          style={{ border: "1px solid #d4af37", width: "100%", opacity: "0.1" }}
           sx={{ mt: "80px" }}
         ></Stack>
+        
         <Stack className={"copyright-txt"}>
-          © Copyright Devex Global, All rights reserved.
+          © {new Date().getFullYear()} Luxury Watch Gallery. All rights reserved.
         </Stack>
       </Container>
     </Footers>

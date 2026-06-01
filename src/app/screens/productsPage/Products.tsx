@@ -44,7 +44,7 @@ export default function Products(props: ProductsProps) {
     page: 1,
     limit: 8,
     order: "createdAt",
-    productCollection: ProductCollection.DISH,
+    productCollection: ProductCollection.WATCHES,
     search: "",
   });
 
@@ -98,7 +98,7 @@ export default function Products(props: ProductsProps) {
         <Stack flexDirection={"column"} alignItems={"center"}>
           <Stack className={"avatar-big-box"}>
             <Stack className={"top-text"}>
-              <p>Burak Restaurant</p>
+              <p>LUXURY COLLECTION</p>
               <Stack className={"single-search-form"}>
                 <input
                   type={"search"}
@@ -164,57 +164,57 @@ export default function Products(props: ProductsProps) {
                             <Button
                               variant={"contained"}
                               color={
-                                productSearch.productCollection === ProductCollection.OTHER
+                                productSearch.productCollection === ProductCollection.WATCHES
                                   ? "primary"
                                   : "secondary"
                               }
-                              onClick={() => searchCollectionHandler(ProductCollection.OTHER)}
+                              onClick={() => searchCollectionHandler(ProductCollection.WATCHES)}
                               >
-                              Other
+                              Watches
                             </Button>
                             <Button
                               variant={"contained"}
                               color={
-                                productSearch.productCollection === ProductCollection.DESSERT
+                                productSearch.productCollection === ProductCollection.BRACELETS
                                   ? "primary"
                                   : "secondary"
                               }
-                              onClick={() => searchCollectionHandler(ProductCollection.DESSERT)}
+                              onClick={() => searchCollectionHandler(ProductCollection.BRACELETS)}
                               >
-                              Dessert
+                              Bracelets
                             </Button>
                             <Button
                               variant={"contained"}
                               color={
-                                productSearch.productCollection === ProductCollection.DRINK
+                                productSearch.productCollection === ProductCollection.RINGS
                                   ? "primary"
                                   : "secondary"
                               }
-                              onClick={() => searchCollectionHandler(ProductCollection.DRINK)}
+                              onClick={() => searchCollectionHandler(ProductCollection.RINGS)}
                               >
-                              Drink
+                              Rings
                             </Button>
                             <Button
                               variant={"contained"}
                               color={
-                                productSearch.productCollection === ProductCollection.SALAD
+                                productSearch.productCollection === ProductCollection.SMART_WATCHES
                                   ? "primary"
                                   : "secondary"
                               }
-                              onClick={() => searchCollectionHandler(ProductCollection.SALAD)}
+                              onClick={() => searchCollectionHandler(ProductCollection.SMART_WATCHES)}
                               >
-                              Salad
+                              Smart Watches
                             </Button>
                             <Button
                               variant={"contained"}
                               color={
-                                productSearch.productCollection === ProductCollection.DISH
+                                productSearch.productCollection === ProductCollection.PERFUMES
                                   ? "primary"
                                   : "secondary"
                               }
-                              onClick={() => searchCollectionHandler(ProductCollection.DISH)}
+                              onClick={() => searchCollectionHandler(ProductCollection.PERFUMES)}
                               >
-                              Dish
+                              Perfumes
                             </Button>
                         </div>
                     </Stack>
@@ -224,7 +224,7 @@ export default function Products(props: ProductsProps) {
                             products.map((product: Product) => {
                               const imagePath = `${serverApi}/${product.productImages[0]}`;
                               const sizeVolume = 
-                              product.productCollection === ProductCollection.DRINK ? product.productVolume + " litre " : product.productSize + "size";
+                              product.productCollection === ProductCollection.WATCHES ? product.productViews + "  " : product.productSize + "size";
                                 return (
                                     <Stack key={product._id} className={"product-card"}
                                     onClick={() => chooseDishHandler(product._id)}>
@@ -304,40 +304,43 @@ export default function Products(props: ProductsProps) {
           </Stack>
         </Container>
 
-        <div className={"brands-logo"}>
-            <Container className={"family-brands"}>
-                <Box className={"category-title"}>Our Family Brands</Box>
-                <Stack className={"brand-list"}>
-                    <Box className={"review-box"}>
-                        <img src={"/img/gurme.webp"} />
-                    </Box>
-                    <Box className={"review-box"}>
-                        <img src={"/img/seafood.webp"} />
-                    </Box>
-                    <Box className={"review-box"}>
-                        <img src={"/img/sweets.webp"} />
-                    </Box>
-                    <Box className={"review-box"}>
-                        <img src={"/img/doner.webp"} />
-                    </Box>
-                </Stack>
-            </Container>
-        </div>
+  <div className={"brands-logo"}>
+  <Container>
+    <Box className={"brands-title"}>Curated Timepiece Highlights</Box>
+    {/* Use a div instead of Stack to ensure CSS Grid takes full control */}
+    <div className={"video-grid"}>
+      <Box className={"video-box"}>
+        <video src={"/video/watch1.mov"} autoPlay loop muted playsInline />
+      </Box>
+      <Box className={"video-box"}>
+        <video src={"/video/watch2.mov"} autoPlay loop muted playsInline />
+      </Box>
+      <Box className={"video-box"}>
+        <video src={"/video/watch3.mov"} autoPlay loop muted playsInline />
+      </Box>
+      <Box className={"video-box"}>
+        <video src={"/video/watch4.mov"} autoPlay loop muted playsInline />
+      </Box>
+    </div>
+  </Container>
+</div>
 
-        <div className={"address"}>
-            <Container>
-                <Stack className={"address-area"}>
-                    <Box className={"title"}>Our address</Box>
-                    <iframe
-                    style={{marginTop: "60px" }}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.045733255449!2d69.23497807646164!3d41.30786870092324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba862628adf%3A0x35cbda4b6948a351!2sKamolon%20Osh!5e0!3m2!1sen!2skr!4v1771503124621!5m2!1sen!2skr" 
-                    width="1320"
-                    height="500"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </Stack>
-            </Container>
-        </div>
+     <div className={"address"}>
+  <Container>
+    <Stack className={"address-area"}>
+      <Box className={"title"}>Our Boutique Location</Box>
+      
+      {/* This is the dedicated map section - separate from the footer */}
+      <div className="map-luxury-wrapper">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6599182315663!2d-73.97824148459424!3d40.75889657932758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f9679f2913%3A0x6b3014a008e5601b!2sJacob%20%26%20Co.!5e0!3m2!1sen!2sus!4v1625000000000!5m2!1sen!2sus"
+          loading="lazy"
+          title="Boutique Location"
+        />
+      </div>
+    </Stack>
+  </Container>
+</div>
     </div>
   );
 }

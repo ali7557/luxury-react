@@ -1,274 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Poppins:wght@300;400;500&display=swap');
 
+/* ==========================================================================
+   HOME NAVBAR
+   ========================================================================== */
 .home-navbar {
   width: 100%;
-  height: 773px;
-  display: flex;
-  background: url("/public/img/banner.webp");
-  background-size: cover;
-}
-
-.home-navbar .navbar-container {
-  margin-top: 55px;
-  height: 642px;
-}
-
-.home-navbar .navbar-container .menu {
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.home-navbar .navbar-container .menu .brand-logo {
-  width: 125px;
-  height: 30px;
-}
-
-.home-navbar .navbar-container .menu .links {
-  min-width: 700px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.home-navbar .navbar-container .menu .links .login-button {
-  background: #3776cc;
-  color: #f8f8ff;
-}
-
-.home-navbar .navbar-container .menu .user-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 24px;
-}
-
-.home-navbar a {
-  text-decoration: none;
-}
-
-.home-navbar .hover-line a {
-  color: #f8f8ff;
-  z-index: 100;
-}
-
-.home-navbar .underline {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #d7b686;
-}
-
-.home-navbar .hover-line:after {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #d7b686;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-}
-
-.home-navbar .hover-line:hover:after {
-  transform: scaleX(1);
-}
-
-.home-navbar div.hover-line:after {
-  transform-origin: 0% 50%;
-}
-
-
-
-
-.home-navbar .navbar-container .header-frame {
-    margin-top: 142px;
-    height: 462px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-.home-navbar .navbar-container .header-frame .detail {
-  width: 510px;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
   display: flex;
   flex-direction: column;
 }
-.home-navbar .navbar-container .header-frame .detail .head-main-txt{
- width: 450px;
- height: 150px;
- font-family: "Roboto Serif";
- font-size: 50px;
- font-style: normal;
- font-weight: 500;
- line-height: normal;
- letter-spacing: -0.75px;
-  color:#f8f8ff;
+.home-navbar * {
+  color: #ffffff !important; /* Forces all text inside the navbar to be white */
 }
 
-
-
-.home-navbar .navbar-container .header-frame .detail .wel-txt{
- width: 510px;
- height: 42px;
- font-family: "Roboto Serif";
- font-size: 36px;
- font-style: normal;
- font-weight: 400;
- line-height: normal;
- letter-spacing: -0.54px;
-  color:#d7b686;
+.navbar-container-fluid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-
-
-.home-navbar .navbar-container .header-frame .detail .service-txt{
- margin-top: 23px;
- width: 153px;
- height: 23px;
- font-family: "Roboto Serif";
- font-size: 20px;
- font-style: normal;
- font-weight: 400;
- line-height: normal;
- letter-spacing: -0.3px;
-  color:#d5d5d5;
-}
-.home-navbar .navbar-container .detail .signup {
-    margin-top: 73px;
-
-}
-.home-navbar .navbar-container .detail .signup .signup-button {
-    width: 210px;;
-    height: 60px;
-    border-radius: 4px;
-    background: #1976d2;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #f8f8ff;;
-
-    
-}
-.home-navbar .navbar-container .logo-frame {
-   margin-top: 43px;
-   width:  690px;
-   height: 419px;
-
-}
-
-.home-navbar .navbar-container .logo-frame  .logo-img {
-    width:  100%;
-    height: 100%;
-    background: url("/public/img/logo.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    filter: invert(25%);
-}
-
-
-
-.other-navbar {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    background: url("/public/img/banner.webp");
-    background-size: cover;
-}
-
-
-
-
-.other-navbar  .navbar-container {
-    margin-top: 55px;
-   
-}
-
-
-
-.other-navbar  .navbar-container .menu{
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-
-.other-navbar  .navbar-container .menu .brand-logo{
-    width: 125px;
-    height: 30px;
+/* TOP MENU */
+.home-navbar .menu {
+  width: 100%;
+  height: 76px;
+  padding: 0 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 100;
+  border-bottom: 1px solid rgba(227, 192, 141, 0.07);
   
 }
 
-
-
-
-.other-navbar  .navbar-container .menu   .links{
- min-width: 700px;
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- align-items: center;
-
+.home-navbar .links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 52px !important;
+  margin-right: 44px !important;
 }
 
-
-.other-navbar  .navbar-container .menu   .links  .login-button{
-  background: "#3776CC";
-  color: "#f8f8ff"
+.home-navbar .hover-line a {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 3.5px !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
 }
 
+.home-navbar .hover-line a:hover { color: #e3c08d !important; }
 
-.other-navbar  .navbar-container .menu   .user-avatar{
-width: 50px;
-height: 50px;
-border-radius: 24px;
-
+.home-navbar .hover-line::after {
+  display: block;
+  content: "";
+  border-bottom: 1px solid rgba(227, 192, 141, 0.6);
+  transform: scaleX(0);
+  transition: transform 280ms ease-in-out;
+  margin-top: 4px;
 }
 
+.home-navbar .hover-line:hover::after { transform: scaleX(1); }
 
-
-.other-navbar  a{
-    text-decoration: none;
-
+button.login-button,
+button.login-button.MuiButton-root {
+  padding: 11px 30px !important;
+  border: 1px solid rgba(227, 192, 141, 0.65) !important;
+  background: transparent !important;
+  color: #e3c08d !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 9px !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+  border-radius: 0 !important;
+  transition: all 0.35s ease !important;
 }
 
-
-.other-navbar .hover-line a{
-    color: #f8f8ff;
-    z-index: 100;
-    
+button.login-button:hover,
+button.login-button.MuiButton-root:hover {
+  background: #e3c08d !important;
+  color: #1b50ab !important;
+  border-color: #734d14 !important;
 }
 
-.other-navbar  .underline {
-    display: block;
-    content: "";
-    border-bottom: solid 2px #d7b686;
+.home-navbar .menu svg,
+.home-navbar .menu img {
+  filter: brightness(0) invert(0.7) !important;
+  transition: filter 0.3s ease;
 }
 
-.other-navbar  .hover-line:after {
-     display: block;
-    content: "";
-    border-bottom: solid 2px #d7b686;
-    transform:  scaleX(0);
-    transition:  transform 250ms ease-in-out;
+.user-avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(177, 115, 21, 0.4);
+  object-fit: cover;
+  transition: border-color 0.3s ease;
+}
+.user-avatar:hover { border-color: #e3c08d; }
+
+/* HERO FRAME */
+.header-frame {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px 150px 64px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  box-sizing: border-box;
 }
 
-.other-navbar  .hover-line:hover:after {
-    transform: scaleX(1);
+.head-main-txt {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 78px !important;
+  font-weight: 300 !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 10px !important;
+  line-height: 1.0 !important;
+  margin-bottom: 18px !important;
 }
 
-.other-navbar  div.hover-line:after {
-    transform-origin: 0% 50%;
-} 
+.wel-txt {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 24px !important;
+  font-weight: 300 !important;
+  color: #e3c08d !important;
+  font-style: italic;
+  letter-spacing: 2px !important;
+  margin-bottom: 14px !important;
+}
 
+.service-txt {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 9px !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  text-transform: uppercase;
+  letter-spacing: 4px !important;
+}
 
+/* CTA BUTTONS — side by side inside hero */
+/* Center the button row */
+.hero-btn-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Added to center the buttons */
+  gap: 20px;               /* Slightly increased gap for luxury breathing room */
+  margin-top: 40px;
+}
 
+/* 1. Primary Gold Button (Signup) */
+button.signup-button,
+button.signup-button.MuiButton-root {
+  height: 56px !important;       /* Increased height */
+  padding: 0 45px !important;    /* Increased width for a bolder look */
+  border-radius: 0 !important;
+  background: #e3c08d !important;
+  color: #0e1116 !important;
+  border: 1px solid #e3c08d !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;   /* Slightly bolder */
+  font-size: 10px !important;    /* Slightly larger text */
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important; /* Wider spacing for elegance */
+  transition: all 0.4s ease !important;
+}
 
-/* BASKET */^5.8.4
+button.signup-button:hover,
+button.signup-button.MuiButton-root:hover {
+  background: transparent !important;
+  color: #e3c08d !important;
+  box-shadow: 0 0 15px rgba(227,192,141,0.2) !important; /* Subtle glow */
+}
+
+/* 2. Secondary Outline Button (Lookbook) */
+button.lookbook-button,
+button.lookbook-button.MuiButton-root {
+  height: 56px !important;       /* Increased height to match */
+  padding: 0 40px !important;    /* Increased width */
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #ffffff !important;     /* Brighter white for visibility */
+  border: 1px solid rgba(227,192,141,0.3) !important; /* Gold border instead of grey */
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+  transition: all 0.4s ease !important;
+}
+
+button.lookbook-button:hover,
+button.lookbook-button.MuiButton-root:hover {
+  background: rgba(227,192,141,0.1) !important; /* Subtle gold fill on hover */
+  border-color: rgba(227,192,141,0.6) !important;
+  color: #e3c08d !important;
+}
+
+/* OTHER NAVBAR */
+.other-navbar {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(14,17,22,0.93), rgba(14,17,22,0.99)),
+              url("/img/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.other-navbar .menu {
+  width: 100%;
+  height: 64px;
+  padding: 0 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid rgba(227, 192, 141, 0.07);
+  
+}
+
+.other-navbar .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+  margin-right: 40px;
+}
+
+.other-navbar .hover-line a {
+  color: rgba(255,255,255,0.6) !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 3px !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+}
+
+.other-navbar .hover-line a:hover { color: #e3c08d !important; }
+
+.other-navbar .hover-line::after {
+  display: block; content: "";
+  border-bottom: 1px solid rgba(227,192,141,0.6);
+  transform: scaleX(0);
+  transition: transform 280ms ease-in-out;
+  margin-top: 4px;
+}
+
+.other-navbar .hover-line:hover::after { transform: scaleX(1); }
+
+.other-navbar .login-button {
+  background: transparent !important;
+  color: #e3c08d !important;
+  border: 1px solid rgba(227,192,141,0.55) !important;
+  border-radius: 0 !important;
+  padding: 9px 26px !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 3px !important;
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+}
+
+.other-navbar .login-button:hover {
+  background: #e3c08d !important;
+  color: #0e1116 !important;
+}
+ 
+/* BASKET ^5.8.4*/
 
 .basket-frame {
   position: relative;
@@ -401,4 +421,30 @@ border-radius: 24px;
   height: 260px;
   display: flex;
   flex-direction: column;
+}
+.brand-logo {
+  /* Positioning */
+  position: absolute;
+  top: 25px;       /* Slightly adjusted for vertical balance */
+  
+  /* Increase this value to move further right */
+  /* Try 120px, 150px, or 180px depending on your preference */
+  left: 120px;     
+  
+  width: 240px;    /* Prominent, luxury size */
+  height: auto;
+  z-index: 10;
+  
+  /* Luxury/Visual Treatment */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.7));
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .brand-logo {
+    left: 60px;    /* Scaled for smaller screens */
+    width: 180px;
+  }
 }

@@ -30,7 +30,7 @@ export default function PopularDishes() {
     <div className="popular-dishes-frame">
       <Container>
         <Stack className="popular-section">
-          <Box className="category-title">Popular Dishes</Box>
+          <Box className="category-title">Popular WATCHES</Box>
           <Stack className="cards-frame">
             <CssVarsProvider>
               {popularDishes.length !== 0 ? (
@@ -97,7 +97,7 @@ export default function PopularDishes() {
                   );
                 })
               ) : (
-                <Box className="no-data">New Products are not available</Box>
+                <Box className="no-data">New Products  not available</Box>
               )}
             </CssVarsProvider>
           </Stack>

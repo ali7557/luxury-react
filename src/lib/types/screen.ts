@@ -16,6 +16,7 @@ export interface AppRootState {
 /** HOMEPAGE **/
 
 export interface HomePageState {
+    products: never[];
     popularDishes:  Product[];
     newDishes:Product[];
     topUsers: Member [];

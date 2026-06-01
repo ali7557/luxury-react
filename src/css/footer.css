@@ -1,94 +1,94 @@
 .foot-desc-txt {
   margin-top: 22px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 34px;
-  color: #e3c08d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 28px;
+  color: #a1a1a1; /* Softer gray for description */
 }
 
 .sns-context {
-  margin-top: 17px;
-  width: 137px;
+  margin-top: 25px;
+  width: 150px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  opacity: 0.7;
+}
+
+.sns-context img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sns-context img:hover {
+    transform: translateY(-3px);
 }
 
 .foot-category-title {
-  width: 106px;
-  font-family: "Poppins";
-  font-style: normal;
+  font-family: "Playfair Display", serif; /* Luxury font */
   font-weight: 600;
-  font-size: 24px;
-  line-height: 34px;
-  color: #c5c8c9;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #d4af37; /* Gold Title */
+  margin-bottom: 10px;
 }
 
 .foot-category-link {
-  margin-top: 20px;
-  height: 170px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 170px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 34px;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 .foot-category-link a {
-  color: #e3c08d;
+  color: #ffffff;
   text-decoration: none;
-  cursor: pointer;
+  transition: color 0.3s ease;
+  opacity: 0.8;
+}
+
+.foot-category-link a:hover {
+  color: #d4af37;
+  opacity: 1;
 }
 
 .find-us {
   display: flex;
-  flex-direction: row;
+  margin-bottom: 15px;
 }
 
 .find-us span {
-  font-family: "Poppins";
-  font-style: normal;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 34px;
-  color: #c5c8c9;
+  font-size: 16px;
+  color: #d4af37;
 }
 
 .find-us div {
-  margin-left: 10px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 34px;
-  color: #e3c08d;
+  margin-left: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.8;
 }
 
 .copyright-txt {
-  margin-top: 17px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 34px;
-  color: #e3c08d;
+  margin-top: 25px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #555555;
 }
 
+/* Luxury Underline Effect */
 .foot-category-title:after {
   display: block;
   content: "";
-  border-bottom: solid 2px #d7b686;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-  transform-origin: 0% 50%;
-}
-
-.foot-category-title:hover:after {
-  transform: scaleX(1);
+  border-bottom: solid 1px #d4af37;
+  width: 30px;
+  margin-top: 5px;
 }
