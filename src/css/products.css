@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    background: #191945;
+    background: #f2eee6;
    
 }
 
@@ -11,103 +11,216 @@
     width: 100%;
     height: auto;
     display: flex;
-  background: #0b1114;
+  background: #f2eee6;
     flex-direction: column;
 }
 
-.products-page .products .avatar-big-fox {
+.products-page .products .product-catalog-hero {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 560px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    background: #05090d;
+    border-bottom: 1px solid rgba(184, 138, 68, 0.18);
+}
+
+.products-page .products .catalog-hero-main {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+.products-page .products .catalog-hero-main::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(5, 9, 13, .68) 0%, rgba(5, 9, 13, .18) 46%, transparent 68%);
+}
+
+.products-page .products .avatar-big-box {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 0 58% 0 64px;
+    box-sizing: border-box;
+    display: flex;
     align-items: center;
 }
 
 /* --- HEADER / TOP TEXT --- */
 .products-page .products .top-text {
     width: 100%;
-    margin-top: 60px;
+    max-width: 470px;
+    margin: 0;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .products-page .products .top-text p {
-    position: relative;
-    margin: 0 auto;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    font-size: 72px;
-    line-height: 1.1;
-    letter-spacing: 12px;
-    color: #b17015;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: clamp(48px, 4vw, 56px);
+    line-height: 0.98;
+    letter-spacing: 0.025em;
+    color: #f4f1ea;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
+}
+
+.products-page .products .catalog-title-accent {
+    width: 44px;
+    height: 1px;
+    margin-top: 17px;
+    background: #b88a44;
+}
+
+.products-page .products .catalog-subtitle {
+    max-width: 430px;
+    margin-top: 13px;
+    color: rgba(244, 241, 234, 0.72);
+    font: 400 14px/1.6 "Poppins", sans-serif;
+    letter-spacing: 0.035em;
+    text-align: left;
+}
+
+.products-page .products .catalog-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
     width: 100%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: right center;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.products-page .products .catalog-hero-controls {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0;
+    padding: 22px 40px 24px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    background: #e8e1d7;
+    border-bottom: 1px solid rgba(16, 32, 43, 0.1);
+    box-sizing: border-box;
 }
 
 /* --- CENTRALIZED LUXURY CONTROL CENTER --- */
-
 .single-search-form {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    gap: 10px !important;
-}
-
-/* Search Row */
-.single-search-form {
+    grid-column: 1 / -1;
     display: flex !important;
     flex-direction: row !important;
-    width: 1000px !important;       /* INCREASED from 450px to 600px to stretch the input */
-    gap: 10px !important;
-    margin-left: auto !important;  
-    margin-right: 0 !important;    
+    align-items: center !important;
+    width: min(820px, 100%) !important;
+    height: 48px;
+    gap: 0 !important;
+    margin: 0 auto !important;
+    overflow: hidden;
+    border: 1px solid rgba(244, 241, 234, 0.2);
+    border-radius: 4px;
+    background: #0a1824;
 }
 
 .single-search-input {
-    flex: 1 !important;            /* This will now take up all available extra space */
-    padding: 8px 12px !important;
-    border: 1px solid #ccc !important;
-    border-radius: 4px !important;
+    min-width: 0;
+    height: 100%;
+    flex: 1 !important;
+    padding: 0 18px !important;
+    border: 0 !important;
+    outline: 0;
+    background: transparent;
+    color: #f4f1ea;
+    font: 400 12px/1 "Poppins", sans-serif;
+    letter-spacing: 0.04em;
 }
 
-.single-button-search {
-    background-color: #0b1114 !important;
-    color: #d7b586 !important;
+.single-search-input::placeholder {
+    color: rgba(244, 241, 234, 0.45);
+}
+
+.products-page .products .single-button-search.MuiButton-root {
+    min-width: 126px;
+    height: 100%;
     padding: 0 20px !important;
-    border: none !important;
+    border: 0 !important;
+    border-left: 1px solid rgba(184, 138, 68, 0.38) !important;
+    border-radius: 0 !important;
+    background: #b88a44 !important;
+    color: #05090d !important;
+    box-shadow: none;
+    font: 600 10px/1 "Poppins", sans-serif;
+    letter-spacing: 0.14em;
+    transition: background-color 220ms ease;
 }
 
-/* 2. FILTER ROW */
+.products-page .products .single-button-search.MuiButton-root:hover {
+    background: #c39955 !important;
+    box-shadow: none;
+}
+
+.products-page .products .dishes-filter-section {
+    margin-top: 10px;
+}
+
 .dishes-filter-box {
     display: flex !important;
     flex-direction: row !important;
-    width: 600px !important;       /* MUST MATCH the 600px above */
-    gap: 5px !important;
-    margin-left: auto !important; 
-    margin-right: 0 !important;
-    margin-top: 5px !important;
+    width: auto !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    border: 1px solid rgba(16, 32, 43, 0.2);
+    border-radius: 3px;
 }
 
-.order {
-    flex: 1 !important;
-    padding: 6px 12px !important;
-    background-color: #d7b586 !important;
-    color: #0b1114 !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    font-size: 10px !important;
-    border: none !important;
-    border-radius: 4px !important;
-    cursor: pointer !important;
+.products-page .products .order.MuiButton-root {
+    min-width: 88px;
+    height: 30px;
+    padding: 0 15px !important;
+    border: 0 !important;
+    border-right: 1px solid rgba(16, 32, 43, 0.14) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: #10202b !important;
+    box-shadow: none;
+    font: 500 9px/1 "Poppins", sans-serif;
+    letter-spacing: 0.14em;
+}
+
+.products-page .products .order.MuiButton-root:last-child {
+    border-right: 0 !important;
+}
+
+.products-page .products .order.MuiButton-containedPrimary {
+    background: rgba(184, 138, 68, 0.16) !important;
+    color: #b88a44 !important;
 }
 
 /* --- FILTERS / CATEGORY NAV --- */
 .products-page .products .product-category {
-    margin-top: 60px;
+    margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -119,11 +232,82 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 8px;
     justify-content: center;
 }
 
-.sub-category-list {
+.products-page .products .category-main .MuiButton-root {
+    min-width: 0;
+    height: 30px;
+    padding: 0 15px;
+    border: 1px solid rgba(16, 32, 43, 0.18);
+    border-radius: 999px;
+    background: transparent;
+    color: #10202b;
+    box-shadow: none;
+    font: 500 9px/1 "Poppins", sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.products-page .products .category-main .MuiButton-containedPrimary {
+    border-color: #b88a44;
+    background: #b88a44;
+    color: #05090d;
+}
+
+.products-page .products .category-main .MuiButton-root:hover {
+    border-color: rgba(184, 138, 68, 0.75);
+    background: rgba(184, 138, 68, 0.12);
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .products-page .products .product-catalog-hero {
+        height: auto;
+        min-height: 660px;
+        padding: 0;
+    }
+
+    .products-page .products .catalog-hero-main {
+        height: 100%;
+        min-height: 660px;
+    }
+
+    .products-page .products .avatar-big-box {
+        padding: 0 28px;
+        justify-content: center;
+    }
+
+    .products-page .products .top-text {
+        max-width: 620px;
+        align-items: center;
+        justify-self: center;
+    }
+
+    .products-page .products .top-text p,
+    .products-page .products .catalog-subtitle { text-align: center; }
+    .products-page .products .category-main { flex-wrap: wrap; }
+}
+
+@media (max-width: 600px) {
+    .products-page .products .product-catalog-hero {
+        height: auto;
+        min-height: 690px;
+        padding: 0;
+    }
+
+    .products-page .products .top-text p { font-size: 40px; }
+
+    .products-page .products .catalog-subtitle {
+        max-width: 310px;
+        font-size: 11px;
+    }
+
+    .products-page .products .single-button-search.MuiButton-root {
+        min-width: 104px;
+        padding-inline: 14px !important;
+    }
+}.sub-category-list {
     position: absolute;
     left: calc(50% + 150px);
     top: 0;
@@ -284,7 +468,7 @@
 /* Container Style */
 .brands-logo {
   width: 100%;
-  background: #0b1114;
+  background: #e8e1d7;
   padding: 80px 0;
   display: flex;
   flex-direction: column;
@@ -295,7 +479,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 36px;
   font-weight: 600;
-  color: #ffffff;
+  color: #10202b;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -383,7 +567,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    background: #f8f8ff;
+    background: #f2eee6;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -548,7 +732,7 @@
 .address {
   width: 100%;
   padding: 80px 0;
-  background-color: #0b1114; /* Matches your navy theme */
+  background-color: #f2eee6;
   display: flex;
   justify-content: center;
 }
@@ -562,7 +746,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 36px;
   font-weight: 600;
-  color: #ffffff; /* White text for contrast */
+  color: #10202b;
   text-align: center;
   margin-bottom: 20px;
 }

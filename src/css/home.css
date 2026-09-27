@@ -1,209 +1,3 @@
-/* ==========================================================================
-   GLOBAL HOMEPAGE LUXURY RESET
-   ========================================================================== */
-C
-/* ==========================================================================
-   1. STATS PANEL (Overlapping Logic)
-   ========================================================================== */
-.homepage .static-frame {
-    width: 100%;
-    padding: 0;
-    background: #0b0e11;
-    position: relative;
-    z-index: 50;
-}
-
-.homepage .luxury-stats-panel {
-    background: #121517;
-    border: 1px solid rgba(227, 192, 141, 0.16);
-    max-width: 1140px;
-    margin: -80px auto 0 auto; /* Overlap effect */
-    padding: 35px;
-    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: space-around;
-}
-
-/* ==========================================================================
-   2. SECTIONS (Exquisite Collections & Curated Launches)
-   ========================================================================== */
-.exquisite-collections-frame, 
-.curated-launches-frame, 
-.connoisseur-community-frame {
-    width: 100%;
-    padding: 100px 0;
-    background: #0b0e11;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.homepage .category-title {
-    text-align: center;
-    font-family: "Playfair Display", serif !important;
-    font-size: 42px !important; /* Slightly larger for impact */
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 8px !important; /* More breathing room */
-    color: #e3c08d !important;
-    margin-bottom: 60px !important;
-    /* Removed the hardcoded ::after content to keep it clean */
-}
-
-/* ==========================================================================
-   3. CARD GRID SYSTEM
-   ========================================================================== */
-.homepage .cards-frame {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.homepage .card {
-    width: 310px;
-    background: #121517;
-    border: 1px solid rgba(227, 192, 141, 0.1);
-    transition: 0.4s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column; /* Allows vertical stacking of image + text */
-    padding-bottom: 20px;
-}
-
-.homepage .card:hover {
-    border-color: rgba(227, 192, 141, 0.4);
-    transform: translateY(-10px);
-}
-
-/* New: The Metadata / Podium Base */
-.homepage .card-metadata {
-    border-top: 1px solid rgba(227, 192, 141, 0.1);
-    padding: 20px 20px 0 20px;
-    margin-top: auto; /* Pushes to the bottom */
-    text-align: center;
-}
-
-.homepage .card-label {
-    color: #e3c08d;
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Explicit high-specificity rule to pull the luxury panel cleanly onto the main layout container */
-.homepage .luxury-stats-panel {
-    background: #121517 !important; /* Solid dark obsidian surface */
-    border: 1px solid rgba(227, 192, 141, 0.16) !important; /* Refined golden borders */
-    border-radius: 0px !important; /* Geometric sharp lines */
-    padding: 35px 15px !important;
-    max-width: 1140px !important;
-    margin: -80px auto 0 auto !important; /* Overlaps seamlessly onto your hero component view */
-    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.8) !important;
-}
-
-.homepage .static-frame .info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: auto;
-}
-
-.homepage .static-frame .info .static-box {
-    width: 25% !important;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/* Delicate micro-borders separating your metric statistics columns */
-.homepage .static-frame .info .static-box:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 15%;
-    height: 70%;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(227, 192, 141, 0.2), transparent);
-}
-
-/* Lightweight luxury typography tracking numbers */
-.homepage .static-frame .info .static-box .static-num {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 36px !important;
-    font-weight: 300 !important; 
-    line-height: 1 !important;
-    color: #e3c08d !important;
-    letter-spacing: -0.5px;
-}
-
-/* Clean micro-letter spacing subtitle text */
-.homepage .static-frame .info .static-box .static-text {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 9.5px !important;
-    text-transform: uppercase;
-    font-weight: 400 !important;
-    letter-spacing: 2.5px !important;
-    line-height: 1.4 !important;
-    color: rgba(255, 255, 255, 0.5) !important;
-    margin-top: 12px !important;
-    opacity: 1 !important;
-}
-
-
-/** ==========================================
-    2. BRAND PARTNER MATRIX ALIGNMENT FIXES
-============================================== **/
-.homepage .brand-ribbon-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 90px !important; /* Perfect luxury tracking separation distance */
-    padding: 70px 0 60px 0 !important;
-    margin: 0 auto !important;
-    width: 100%;
-    background: #0b0e11 !important;
-}
-
-.homepage .luxury-logo-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 24px !important; /* Explicit standard baseline height track for all logos */
-    position: relative;
-    padding: 0 !important;
-    opacity: 0.4;
-    transition: all 0.4s ease;
-}
-
-.homepage .luxury-logo-wrapper:hover {
-    opacity: 0.95;
-    transform: translateY(-1px);
-}
-
-.homepage .brand-img-asset {
-    height: 100% !important;
-    width: auto !important;
-    object-fit: contain !important;
-    filter: brightness(0) invert(1) !important; /* Flattens inconsistent vectors into clean, crisp luxury white */
-    transition: all 0.3s ease;
-}
-
-/* Custom targeted height caps to compensate for natural logo image proportions */
-.homepage .brand-img-asset.rado-fix { height: 13px !important; }
-.homepage .brand-img-asset.swatch-fix { height: 16px !important; }
-.homepage .brand-img-asset.omega-fix { height: 18px !important; }
-.homepage .brand-img-asset.zenith-fix { height: 12px !important; }
-
-
 /** ==========================================
     3. POPULAR COLLECTIONS & THEMATIC GRID
 ============================================== **/
@@ -211,9 +5,7 @@ C
 .homepage .new-products-frame,
 .homepage .active-users-frame {
     width: 100%;
-    padding: 80px 0 60px 0;
     display: flex;
-    background: #0b0e11 !important;
 }
 
 .homepage .popular-section,
@@ -227,57 +19,30 @@ C
 
 .homepage .category-title {
     text-align: center;
-    font-family: "Playfair Display", serif !important;
-    font-size: 34px !important;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #e3c08d !important;
 }
 
 /* Dynamically modifies the heading label 'POPULAR DISHES' if changed via CMS mapping */
 .homepage .category-title::after {
     display: block;
     content: "EXQUISITE COLLECTIONS";
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: rgba(255, 255, 255, 0.35);
-    margin-top: 10px;
 }
 
 .homepage .cards-frame {
     width: 100%;
-    margin-top: 50px;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 24px;
 }
 
 .homepage .cards-frame .card {
-    min-height: 400px;
-    width: 310px;
-    background: #121517;
-    border: 1px solid rgba(227, 192, 141, 0.05);
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.homepage .cards-frame .card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(227, 192, 141, 0.25);
-    box-shadow: 0px 20px 40px rgba(0,0,0,0.5);
-}
-
-.homepage .member-nickname {
-    color: #ffffff !important;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
 .homepage .no-data {
@@ -291,7 +56,6 @@ C
     font-weight: 400;
     font-size: 11px;
     letter-spacing: 3px;
-    color: rgba(227, 192, 141, 0.4);
 }
 
 
@@ -300,18 +64,89 @@ C
 ============================================== **/
 .homepage .ads-restaurant-frame {
     width: 100%;
-    height: 550px;
-    display: flex;
-    overflow: hidden;
+    padding: 76px 0;
+    background: #f4f1ea;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.homepage .ads-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+}
+
+.homepage .ads-editorial-label {
+    margin-bottom: 20px;
+    color: #b88a44;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: .22em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.homepage .ads-editorial-label::after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 1px;
+    margin: 10px auto 0;
+    background: rgba(184, 138, 68, .55);
+}
+
+.homepage .ads-video-frame {
     position: relative;
-    box-shadow: inset 0px 0px 50px #000000;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    border: 1px solid rgba(15, 34, 48, .12);
+    border-radius: 12px;
+    background: #0d1e2b;
+    box-shadow: 0 24px 60px -38px rgba(7, 20, 31, .48);
+    transition: box-shadow .3s ease;
+}
+
+.homepage .ads-video-frame:hover {
+    box-shadow: 0 28px 68px -36px rgba(7, 20, 31, .58);
+}
+
+.homepage .ads-video-frame::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 22%;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(7, 20, 31, .18), transparent);
 }
 
 .homepage .ads-restaurant-frame .ads-video {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: #0c0e12;
+    background: #0d1e2b;
+}
+
+@media (max-width: 900px) {
+    .homepage .ads-restaurant-frame { padding: 60px 0; }
+    .homepage .ads-container { padding: 0 32px; }
+    .homepage .ads-video-frame { aspect-ratio: 16 / 8; }
+}
+
+@media (max-width: 620px) {
+    .homepage .ads-restaurant-frame { padding: 52px 0; }
+    .homepage .ads-container { padding: 0 20px; }
+    .homepage .ads-video-frame {
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+    }
 }
 
 
@@ -322,53 +157,67 @@ C
 .homepage .events-frame {
     width: 100%;
     height: auto;
-    background: #0b0e11;
-    padding: 80px 0;
+    padding: 60px 48px 56px;
     text-align: center; /* Ensures the title and underline are centered */
 }
 
+.homepage .events-main {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.homepage .prev-next-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 28px;
+    margin-top: 18px;
+}
+
+.homepage .prev-next-frame .swiper-button-prev,
+.homepage .prev-next-frame .swiper-button-next {
+    position: static;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+}
+
+.homepage .prev-next-frame .swiper-pagination {
+    position: static;
+    width: auto;
+    transform: none;
+}
+
 /* 2. Title and Underline - clean and centered */
-.homepage .events-frame .category-title {
-    font-family: "Playfair Display", serif;
-    color: #e3c08d;
-    font-size: 32px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
-
-.luxury-underline {
-    width: 50px;
-    height: 1px;
-    background: #e3c08d;
-    margin: 15px auto 50px auto; /* Auto margin centers this */
-}
-
 /* 3. The card container - reduced height for better luxury proportion */
 .homepage .events-frame .events-main .events-info {
     width: 100%;
-    height: 400px; /* Reduced from 520px to look sophisticated */
+    height: 370px;
 }
 
-.events-info-frame {
+.homepage .events-info-frame {
     height: 100%;
     position: relative;
     overflow: hidden;
-    background: #000;
-    border: 1px solid rgba(227, 192, 141, 0.15);
+    border: 1px solid rgba(184, 138, 68, .15);
     transition: all 0.4s ease;
 }
 
-.events-info-frame:hover {
-    border-color: rgba(227, 192, 141, 0.4);
+.homepage .events-info-frame:hover {
+    border-color: rgba(184, 138, 68, .4);
 }
 
-.events-img-wrapper {
+.homepage .events-img-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.events-img {
+.homepage .events-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -376,73 +225,84 @@ C
     transition: all 0.8s ease;
 }
 
-.events-info-frame:hover .events-img {
+.homepage .events-info-frame:hover .events-img {
     filter: brightness(0.4);
     transform: scale(1.05);
 }
 
 /* 4. Text Overlay - tighter padding */
-.luxury-details-overlay {
+.homepage .luxury-details-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 25px; /* Reduced padding */
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%);
-    color: #fff;
+    color: #f4f1ea;
     text-align: left;
     box-sizing: border-box;
 }
 
-.event-label {
-    color: #e3c08d;
+.homepage .event-label {
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     margin-bottom: 5px;
 }
 
-.event-luxury-title {
+.homepage .event-luxury-title {
     font-family: "Playfair Display", serif;
     font-size: 20px; /* Smaller title */
     margin: 0 0 8px 0;
-    color: #fff;
+    color: #f4f1ea;
 }
 
-.event-author-gold {
-    color: #8e8e93;
+.homepage .event-author-gold {
     font-size: 12px;
     margin-bottom: 15px;
 }
 
-.event-luxury-desc {
+.homepage .event-luxury-desc {
     font-size: 13px;
     line-height: 1.6;
     font-weight: 300;
-    color: #b5b5b7;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s ease;
 }
 
-.events-info-frame:hover .event-luxury-desc {
+.homepage .events-info-frame:hover .event-luxury-desc {
     opacity: 1;
     max-height: 90px;
     margin-bottom: 15px;
 }
 
-.event-meta-info {
+.homepage .event-meta-info {
     display: flex;
     gap: 20px;
-    border-top: 1px solid rgba(227, 192, 141, 0.15);
+    border-top: 1px solid rgba(184, 138, 68, .15);
     padding-top: 15px;
 }
 
-.meta-item {
+.homepage .meta-item {
     display: flex;
     align-items: center;
     font-size: 11px;
-    color: #e3c08d;
     gap: 6px;
-}    
+}
+
+.homepage{--home-bg:#05090d;--home-surface:#0d1e2b;--home-card:#0d1e2b;--home-gold:#b88a44;--home-text:#f4f1ea;--home-muted:#5f6b73;--home-main:#f4f1ea;--home-elevated:#f4f1ea;--home-stone:#e7e0d5;--home-ink:#10202b;background:var(--home-bg);color:var(--home-text);font-family:"Poppins",sans-serif}
+.homepage .statistics-section-wrapper{position:static;width:100%;max-width:none;min-height:0;margin:0;padding:0;overflow:visible;background:#f4f1ea;border:0;border-radius:0;box-shadow:none;box-sizing:border-box}.homepage .statistics-container{width:100%;max-width:1440px;margin:0 auto;padding-left:48px!important;padding-right:48px!important}.homepage .statistics-row-section{padding:44px 0;background:#f4f1ea}
+.homepage .luxury-counter-frame{margin:0;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.homepage .luxury-counter-frame .static-box{flex:1}.homepage .luxury-counter-frame .static-num{color:#b88a44;font:300 clamp(42px,3vw,46px)/1 "Playfair Display",serif;letter-spacing:-.02em}.homepage .luxury-counter-frame .static-text{margin-top:4px;color:#10202b;font-size:10.5px;font-weight:500;line-height:1.35;letter-spacing:.16em;text-transform:uppercase}
+.homepage .brands-section{min-height:120px;padding:22px 0 24px;background:#ece7de;box-sizing:border-box}.homepage .brand-ribbon-heading.MuiTypography-root{margin:0 0 16px;color:#10202b;font:500 10.5px/1.3 "Poppins",sans-serif;letter-spacing:.18em;text-align:center;text-transform:uppercase}.homepage .brand-ribbon-container{gap:clamp(36px,6vw,88px)!important;padding:0!important;background:transparent;border:0;border-radius:0}.homepage .brand-ribbon-item{height:34px;flex:1;max-width:200px;display:flex;align-items:center;justify-content:center}.homepage .brand-ribbon-logo{width:auto!important;max-width:138px;height:auto!important;max-height:30px;object-fit:contain;opacity:.92;filter:grayscale(1) brightness(.26)!important;transition:opacity .25s ease,filter .25s ease!important}.homepage .brand-ribbon-item:hover .brand-ribbon-logo{opacity:1;filter:grayscale(1) brightness(.2)!important}
+.homepage .popular-dishes-frame{padding:76px 0;background:#f4f1ea;border:0}.homepage .popular-dishes-frame>.MuiContainer-root{width:100%;max-width:1440px;padding-left:48px;padding-right:48px}.homepage .new-products-frame{padding:76px 0;background:#f4f1ea;border:0}.homepage .new-products-frame .new-collection-container{width:100%;max-width:1440px;padding-left:48px;padding-right:48px}.homepage .active-users-frame{padding:56px 0 60px;background:#f4f1ea;border:0}.homepage .active-users-frame>.MuiContainer-root{width:100%;max-width:1440px;padding-left:48px;padding-right:48px}.homepage .events-frame{background:#ded5c8!important;border:0}
+.homepage .popular-dishes-frame .category-title,.homepage .new-products-frame .category-title,.homepage .active-users-frame .category-title{margin-bottom:0;color:#10202b;font:400 clamp(40px,3vw,46px)/1.05 "Playfair Display",serif;letter-spacing:.01em}.homepage .events-frame .category-title{margin-bottom:0!important;color:#10202b!important;font:400 clamp(40px,3vw,46px)/1.05 "Playfair Display",serif!important;letter-spacing:.01em!important}.homepage .category-title:after{margin-top:8px;color:#b88a44!important;font:500 10px/1.6 "Poppins",sans-serif;letter-spacing:.22em!important}.homepage .popular-dishes-frame .category-title:after{content:"CURATED FOR COLLECTORS"}.homepage .new-products-frame .category-title:after{content:"LATEST ARRIVALS"}.homepage .active-users-frame .category-title:after{content:"OUR COMMUNITY"}.homepage .events-frame .luxury-underline{width:42px;height:1px;margin:14px auto 32px;background:#b88a44}
+.homepage .popular-dishes-frame .cards-frame,.homepage .new-products-frame .cards-frame{max-width:1344px;align-items:stretch;justify-content:center;gap:24px;margin-top:38px}.homepage .popular-dishes-frame .card,.homepage .new-products-frame .card{width:calc(25% - 18px);min-width:0;overflow:hidden;border:1px solid rgba(15,34,48,.08);border-radius:6px;background:#0d1e2b;box-shadow:0 10px 24px -18px rgba(7,20,31,.58);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}.homepage .popular-dishes-frame .card:hover,.homepage .new-products-frame .card:hover{transform:translateY(-4px);border-color:rgba(184,138,68,.18);box-shadow:0 18px 34px -18px rgba(7,20,31,.7)}
+.homepage .popular-dishes-frame .card,.homepage .new-products-frame .card{min-height:420px;padding:0;background:#0d1e2b}.homepage .popular-dishes-frame .card img,.homepage .new-products-frame .card img{object-fit:cover;filter:saturate(.9) brightness(.9);transition:transform .28s ease,filter .28s ease}.homepage .popular-dishes-frame .card:hover img,.homepage .new-products-frame .card:hover img{transform:scale(1.025)}.homepage .popular-dishes-frame .card-cover,.homepage .new-products-frame .card-cover{background:linear-gradient(180deg,transparent 30%,rgba(7,20,31,.24) 58%,rgba(7,20,31,.9))}.homepage .popular-dishes-frame .MuiCardContent-root,.homepage .new-products-frame .MuiCardContent-root{padding:26px 22px 18px}.homepage .popular-dishes-frame .MuiCardContent-root .MuiTypography-root:first-child,.homepage .new-products-frame .MuiCardContent-root .MuiTypography-root:first-child{color:#f4f1ea!important;font:500 19px/1.3 "Playfair Display",serif}.homepage .popular-dishes-frame .MuiCardContent-root .MuiTypography-root:last-child,.homepage .new-products-frame .MuiCardContent-root .MuiTypography-root:last-child{color:#5f6b73!important;font-size:10px;font-weight:400}.homepage .popular-dishes-frame .MuiCardContent-root .MuiTypography-root:last-child svg,.homepage .new-products-frame .MuiCardContent-root .MuiTypography-root:last-child svg{font-size:18px}.homepage .popular-dishes-frame .card>.MuiCardOverflow-root:last-child,.homepage .new-products-frame .card>.MuiCardOverflow-root:last-child{min-height:66px;height:auto!important;padding:16px 20px;background:#07141f;border-top:1px solid rgba(244,241,234,.07)}.homepage .popular-dishes-frame .card>.MuiCardOverflow-root:last-child .MuiTypography-root,.homepage .new-products-frame .card>.MuiCardOverflow-root:last-child .MuiTypography-root{color:#5f6b73!important;font-size:11px;line-height:1.55}.homepage .popular-dishes-frame .card>.MuiCardOverflow-root:last-child svg{font-size:17px;color:#b88a44}
+.homepage .popular-dishes-frame .popular-card-footer{align-items:center;padding:15px 20px!important}.homepage .popular-dishes-frame .popular-card-description.MuiTypography-root{min-width:0;color:rgba(244,241,234,.68)!important;font-size:12px!important;font-weight:400;line-height:1.5!important;letter-spacing:.015em}.homepage .popular-dishes-frame .popular-card-description .MuiTypography-startDecorator{margin-right:10px}.homepage .popular-dishes-frame .popular-card-description svg{flex:0 0 auto;font-size:18px;color:#b88a44}
+.homepage .new-products-frame .new-card-footer{align-items:center;justify-content:flex-start;padding:12px 20px!important;background:#07141f}.homepage .new-products-frame .new-card-price.MuiTypography-root{display:flex;flex-direction:column;color:#b88a44!important;font:600 17px/1.15 "Playfair Display",serif!important;letter-spacing:.025em;font-variant-numeric:tabular-nums}.homepage .new-products-frame .new-card-price:before{content:"PRICE";margin-bottom:4px;color:#5f6b73;font:500 8px/1 "Poppins",sans-serif;letter-spacing:.18em}
+.homepage .active-users-frame .cards-frame{max-width:1252px;margin:32px auto 0;align-items:stretch;justify-content:center;gap:32px}.homepage .active-users-frame .card{flex:0 1 396px;width:calc(33.333% - 21.34px);max-width:396px;height:460px;min-width:0;padding:0;overflow:hidden;background:#f4f1ea;border:1px solid rgba(15,34,48,.09);border-radius:9px;box-shadow:0 14px 30px -20px rgba(15,34,48,.38);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}.homepage .active-users-frame .card:hover{transform:translateY(-3px);border-color:rgba(15,34,48,.14);box-shadow:0 20px 38px -20px rgba(15,34,48,.48)}.homepage .active-users-frame .card>.MuiCardOverflow-root:first-child{height:362px;overflow:hidden;background:#e7e0d5}.homepage .active-users-frame .MuiAspectRatio-root{height:362px}.homepage .active-users-frame .MuiAspectRatio-root img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.92);transition:transform .28s ease}.homepage .active-users-frame .card:hover img{transform:scale(1.015)}.homepage .active-users-frame .product-detail{height:96px;min-height:0;padding:16px 18px!important;display:flex;align-items:center;background:#f4f1ea!important;border-top:1px solid rgba(15,34,48,.08)!important;box-sizing:border-box}.homepage .active-users-frame .title{max-width:100%;overflow:hidden;color:#10202b!important;font:500 19px/1.3 "Playfair Display",serif!important;text-overflow:ellipsis;white-space:nowrap}.homepage .active-users-frame .title:after{content:"Collector";display:block;margin-top:5px;color:#b88a44;font:500 9px/1.4 "Poppins",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.homepage .events-info-frame{background:#0d1e2b;border-color:rgba(184,138,68,.16);border-radius:3px}.homepage .luxury-details-overlay{background:linear-gradient(to top,rgba(7,20,31,.98),rgba(7,20,31,.7) 48%,transparent)}.homepage .event-label,.homepage .meta-item{color:#b88a44}.homepage .event-author-gold,.homepage .event-luxury-desc,.homepage .no-data{color:#5f6b73!important}
+@media(max-width:1100px){.homepage .popular-dishes-frame,.homepage .new-products-frame,.homepage .active-users-frame{padding:60px 0}.homepage .popular-dishes-frame>.MuiContainer-root,.homepage .new-products-frame .new-collection-container,.homepage .active-users-frame>.MuiContainer-root{padding-left:32px;padding-right:32px}.homepage .events-frame{padding:60px 32px 56px}.homepage .popular-dishes-frame .cards-frame,.homepage .new-products-frame .cards-frame,.homepage .active-users-frame .cards-frame{flex-wrap:wrap}.homepage .popular-dishes-frame .card,.homepage .new-products-frame .card,.homepage .active-users-frame .card{width:calc(50% - 12px)}}
+@media(max-width:620px){.homepage .statistics-section-wrapper{width:100%;height:auto;margin:0;padding:0;border-radius:0}.homepage .statistics-container{padding-left:24px!important;padding-right:24px!important}.homepage .statistics-row-section{padding:36px 0}.homepage .brands-section{min-height:0;padding:24px 0 28px}.homepage .popular-dishes-frame,.homepage .new-products-frame,.homepage .active-users-frame{padding:52px 0}.homepage .popular-dishes-frame>.MuiContainer-root,.homepage .new-products-frame .new-collection-container,.homepage .active-users-frame>.MuiContainer-root{padding-left:20px;padding-right:20px}.homepage .events-frame{padding:52px 20px 48px}.homepage .events-frame .events-main .events-info{height:340px}.homepage .popular-dishes-frame .cards-frame,.homepage .new-products-frame .cards-frame,.homepage .active-users-frame .cards-frame{margin-top:36px}.homepage .popular-dishes-frame .card,.homepage .new-products-frame .card,.homepage .active-users-frame .card{width:100%}.homepage .luxury-counter-frame,.homepage .brand-ribbon-container{flex-wrap:wrap;row-gap:24px!important}.homepage .luxury-counter-frame .static-box{min-width:40%}.homepage .brand-ribbon-item{min-width:35%}}

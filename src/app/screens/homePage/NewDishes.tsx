@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Container, Stack } from "@mui/material";
 import { CssVarsProvider } from "@mui/joy/styles";
-import AspectRatio from "@mui/joy/AspectRatio";
 import Card from "@mui/joy/Card";
+import CardCover from "@mui/joy/CardCover";
+import CardContent from "@mui/joy/CardContent";
 import CardOverflow from "@mui/joy/CardOverflow";
 import Typography from "@mui/joy/Typography";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import Divider from "../../components/divider";
 
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
@@ -26,7 +26,7 @@ export default function NewDishes() {
 
   return (
     <div className="new-products-frame">
-      <Container>
+      <Container maxWidth={false} className="new-collection-container">
         <Stack className="main">
           <Box className="category-title">NEW COLLECTION</Box>
           <Stack className="cards-frame">
@@ -42,26 +42,78 @@ export default function NewDishes() {
                     : `${product.productSize} size`;
 
                   return ( 
-                    <Card key={product._id} variant="outlined" className="card">
-                      <CardOverflow>
-                        <div className="product-sale">{sizeVolume}</div>
-                        <AspectRatio ratio={1}>
-                          <img src={imagePath} alt={product.productName} />
-                        </AspectRatio>
-                      </CardOverflow>
+                    <Card key={product._id} className="card">
+                      <CardCover>
+                        <img src={imagePath} alt={product.productName} />
+                      </CardCover>
 
-                      <CardOverflow variant="soft" className="product-detail">
-                        <Stack className="info">
-                          <Stack flexDirection="row">
-                            {/* FIX: Changed 'ele' to 'product' to match the map variable */}
-                            <Typography className="title">{product.productName}</Typography>
-                            <Divider width="2" height="24" bg="#d9d9d9" />
-                            <Typography className="price">${product.productPrice}</Typography> 
-                          </Stack>
+                      <CardCover className="card-cover" />
+                      <Box
+                        sx={{
+                          position: "absolute",
+                          top: 14,
+                          left: 14,
+                          zIndex: 3,
+                          height: 24,
+                          px: 1.125,
+                          display: "flex",
+                          alignItems: "center",
+                          border: "1px solid rgba(197,160,89,.25)",
+                          borderRadius: "2px",
+                          background: "rgba(19,27,36,.82)",
+                          color: "#c5a059",
+                          fontSize: "9px",
+                          lineHeight: 1,
+                          letterSpacing: ".14em",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        {sizeVolume}
+                      </Box>
+
+                      <CardContent sx={{ justifyContent: "flex-end" }}>
+                        <Stack
+                          flexDirection="row"
+                          justifyContent="space-between"
+                        >
+                          <Typography
+                            level="h2"
+                            fontSize="lg"
+                            textColor="#fff"
+                            mb={1}
+                          >
+                            {product.productName}
+                          </Typography>
+
+                          <Typography
+                            sx={{
+                              fontWeight: "md",
+                              color: "neutral.300",
+                              alignItems: "center",
+                              display: "flex",
+                            }}
+                          >
+                            {product.productViews}
+                            <VisibilityIcon
+                              sx={{ fontSize: 25, marginLeft: "5px" }}
+                            />
+                          </Typography>
                         </Stack>
-                        <Typography className="views">
-                          {product.productViews}
-                          <VisibilityIcon sx={{ fontSize: 20, marginLeft: "5px" }} />
+                      </CardContent>
+
+                      <CardOverflow
+                        className="new-card-footer"
+                        sx={{
+                          display: "flex",
+                          gap: 1.5,
+                          py: 1.5,
+                          px: "var(--Card-padding)",
+                          borderTop: "1px solid",
+                          height: "60px",
+                        }}
+                      >
+                        <Typography className="new-card-price" textColor="neutral.300">
+                          ${product.productPrice}
                         </Typography>
                       </CardOverflow>
                     </Card>

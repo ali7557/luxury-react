@@ -15,10 +15,10 @@ export default function Footer() {
   const authMember = null;
 
   return (
-    <Footers>
+    <Footers className="site-footer">
       <Container>
-        <Stack flexDirection={"row"} sx={{ mt: "94px" }}>
-          <Stack flexDirection={"column"} style={{ width: "340px" }}>
+        <Stack className="footer-main" flexDirection={"row"} sx={{ mt: "94px" }}>
+          <Stack className="footer-brand" flexDirection={"column"} style={{ width: "340px" }}>
             <Box>
               {/* Replace with your new Watch Logo */}
               <img width={"120px"} src={"/icons/logo.png"} alt="Luxury Logo" />
@@ -36,7 +36,7 @@ export default function Footer() {
             </Box>
           </Stack>
           
-          <Stack sx={{ ml: "288px" }} flexDirection={"row"}>
+          <Stack className="footer-columns" sx={{ ml: "288px" }} flexDirection={"row"}>
             <Stack>
               <Box>
                 <Box className={"foot-category-title"}>Collection</Box>
@@ -49,7 +49,7 @@ export default function Footer() {
               </Box>
             </Stack>
             
-            <Stack sx={{ ml: "100px" }}>
+            <Stack className="footer-boutique" sx={{ ml: "100px" }}>
               <Box>
                 <Box className={"foot-category-title"}>Boutique</Box>
                 <Box
@@ -81,6 +81,7 @@ export default function Footer() {
         </Stack>
         
         <Stack
+          className="footer-rule"
           style={{ border: "1px solid #d4af37", width: "100%", opacity: "0.1" }}
           sx={{ mt: "80px" }}
         ></Stack>

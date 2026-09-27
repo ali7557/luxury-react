@@ -19,6 +19,7 @@ import { ProductCollection } from "../../../lib/enums/product.enum";
 import { serverApi } from "../../../lib/config";
 import { useHistory } from "react-router-dom";
 import { CartItem } from "../../../lib/types/search";
+import LazyAutoplayVideo from "../../components/video/LazyAutoplayVideo";
 
 /** REDUX SLICE & SELECTOR **/
 const actionDispatch = (dispatch: Dispatch) => ({
@@ -94,11 +95,27 @@ export default function Products(props: ProductsProps) {
 
   return (
     <div className={"products"}>
-      <Container>
-        <Stack flexDirection={"column"} alignItems={"center"}>
+          <Stack className={"product-catalog-hero"}>
+            <div className={"catalog-hero-main"}>
           <Stack className={"avatar-big-box"}>
             <Stack className={"top-text"}>
               <p>LUXURY COLLECTION</p>
+              <span className={"catalog-title-accent"} aria-hidden={"true"} />
+              <span className={"catalog-subtitle"}>
+                Discover exceptional timepieces and curated luxury pieces.
+              </span>
+            </Stack>
+          </Stack>
+              <img
+                className={"catalog-hero-image"}
+                src={"/img/watch2.jpg"}
+                alt={"Luxury watch collection"}
+              />
+            </div>
+          </Stack>
+      <Container>
+        <Stack flexDirection={"column"} alignItems={"center"}>
+            <Stack className={"catalog-hero-controls"}>
               <Stack className={"single-search-form"}>
                 <input
                   type={"search"}
@@ -120,8 +137,6 @@ export default function Products(props: ProductsProps) {
                   Search
                 </Button>
               </Stack>
-            </Stack>
-          </Stack>
 
                 <Stack className={"dishes-filter-section"}>
                   <Stack className={"dishes-filter-box"}>
@@ -218,6 +233,8 @@ export default function Products(props: ProductsProps) {
                             </Button>
                         </div>
                     </Stack>
+                </Stack>
+            </Stack>
 
                     <Stack className={"product-wrapper"}>
                         {products.length !== 0 ? (
@@ -278,7 +295,6 @@ export default function Products(props: ProductsProps) {
                             <Box className="no-data">Products are not available!</Box>
                         )}
                     </Stack>
-                </Stack>
 
                 <Stack className={"pagination-section"}>
                   <Pagination
@@ -310,16 +326,16 @@ export default function Products(props: ProductsProps) {
     {/* Use a div instead of Stack to ensure CSS Grid takes full control */}
     <div className={"video-grid"}>
       <Box className={"video-box"}>
-        <video src={"/video/watch1.mov"} autoPlay loop muted playsInline />
+        <LazyAutoplayVideo src={"/video/watch1.mov"} loop muted playsInline />
       </Box>
       <Box className={"video-box"}>
-        <video src={"/video/watch2.mov"} autoPlay loop muted playsInline />
+        <LazyAutoplayVideo src={"/video/watch2.mov"} loop muted playsInline />
       </Box>
       <Box className={"video-box"}>
-        <video src={"/video/watch3.mov"} autoPlay loop muted playsInline />
+        <LazyAutoplayVideo src={"/video/watch3.mov"} loop muted playsInline />
       </Box>
       <Box className={"video-box"}>
-        <video src={"/video/watch4.mov"} autoPlay loop muted playsInline />
+        <LazyAutoplayVideo src={"/video/watch4.mov"} loop muted playsInline />
       </Box>
     </div>
   </Container>

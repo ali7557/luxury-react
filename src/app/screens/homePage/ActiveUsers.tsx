@@ -32,8 +32,8 @@ export default function ActiveUsers() {
             return (
               <Card key={member._id} variant="outlined" className={"card"}>
                 <CardOverflow>
-                     <AspectRatio ratio="1">
-                  <img src={imagePath} alt="" />
+                     <AspectRatio ratio="34/31">
+                  <img src={imagePath} alt={member.memberNick} />
                   </AspectRatio>
                 </CardOverflow>
                 <CardOverflow variant="soft" className="product-detail">

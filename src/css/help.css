@@ -3,10 +3,109 @@
   width: 100%;
   height: auto;
   display: flex;
-  background: #0b1114; /* Deep Navy Luxury Background */
+  flex-direction: column;
+  background: #f2eee6;
   padding-bottom: 50px;
 }
 
+.help-page .help-hero {
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  background: #05090d;
+}
+
+.help-page .help-hero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.help-page .help-hero-inner::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(5, 9, 13, .68) 0%, rgba(5, 9, 13, .18) 46%, transparent 68%);
+}
+
+.help-page .help-hero-copy {
+  position: absolute;
+  top: 50%;
+  left: 64px;
+  z-index: 2;
+  width: min(560px, 42%);
+  max-width: 560px;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.help-page .help-hero-copy h1 {
+  margin: 0;
+  color: #f4f1ea;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(54px, 4vw, 64px);
+  font-weight: 300;
+  line-height: .98;
+  letter-spacing: .01em;
+}
+
+.help-page .help-hero-copy span {
+  display: block;
+  width: 48px;
+  height: 1px;
+  margin-top: 18px;
+  background: #b88a44;
+}
+
+.help-page .help-hero-copy p {
+  max-width: 480px;
+  margin: 16px 0 0;
+  color: rgba(244, 241, 234, .72);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: .035em;
+}
+
+.help-page .help-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: right center;
+  border: 0;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .help-page .help-hero {
+    height: auto;
+    min-height: 660px;
+  }
+
+  .help-page .help-hero-inner {
+    min-height: 660px;
+  }
+
+  .help-page .help-hero-copy {
+    left: 28px;
+    width: calc(100% - 56px);
+    max-width: 620px;
+    text-align: center;
+  }
+
+  .help-page .help-hero-copy span { margin-inline: auto; }
+}
 .help-page .help-container {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -20,7 +119,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-bottom: 1px solid #1c262a;
+  border-bottom: 1px solid rgba(16, 32, 43, 0.1);
+  background: #e8e1d7;
 }
 
 .help-page .help-menu .table-list {
@@ -43,7 +143,7 @@
 .help-page .help-main-content {
   width: 100%;
   height: auto;
-  background: #0b1114; /* Ensure the content wrapper is also dark */
+  background: #f2eee6;
 }
 
 /* --- Rules Box (FAQ/Terms) --- */
@@ -84,7 +184,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  background: #0b1114;
+  background: #f2eee6;
 }
 
 /* --- Admin Contact Form --- */
@@ -157,6 +257,7 @@
   width: 100%;
   height: 60px;
   display: flex;
+  flex-direction: column;
   background: #0b1114;
   border: 1px solid #333;
   border-radius: 8px;
@@ -172,6 +273,7 @@
   width: 100%;
   height: 150px;
   display: flex;
+  flex-direction: column;
   background: #0b1114;
   border: 1px solid #333;
   border-radius: 8px;

@@ -77,6 +77,7 @@ export default function PopularDishes() {
                       </CardContent>
 
                       <CardOverflow
+                        className="popular-card-footer"
                         sx={{
                           display: "flex",
                           gap: 1.5,
@@ -87,6 +88,7 @@ export default function PopularDishes() {
                         }}
                       >
                         <Typography
+                          className="popular-card-description"
                           startDecorator={<DescriptionOutlinedIcon />}
                           textColor="neutral.300"
                         >

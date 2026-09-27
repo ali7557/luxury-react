@@ -1,5 +1,5 @@
 import { Box, Button, Container, ListItemIcon, Menu, MenuItem, Stack } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Basket from "./Basket";
 import { CartItem } from "../../../lib/types/search";
 import { useGlobals } from "../../hooks/useGlobal";
@@ -26,16 +26,20 @@ export default function OtherNavbar(props: OtherNavbarProps) {
      handleCloseLogout,
      handleLogoutRequest,} = props;
   const {authMember} = useGlobals();
+  const location = useLocation();
+  const usesLightNavbar =
+    location.pathname.startsWith("/products") || location.pathname.startsWith("/help");
   return (
-    <div className="other-navbar">
+    <div className={`other-navbar${usesLightNavbar ? " products-navbar" : ""}`}>
       <Container className="navbar-container">
         <Stack className="menu">
-          <Box>
+          <Box className="other-nav-brand">
             <NavLink to="/">
               <img className="brand-logo" src="/icons/logo.png" alt="Logo"/>
             </NavLink>
+
           </Box>
-          <Stack className="links">
+          <Stack className="links other-nav-center">
             <Box className={"hover-line"}>
               <NavLink to="/">Home</NavLink>
             </Box>
@@ -55,6 +59,8 @@ export default function OtherNavbar(props: OtherNavbarProps) {
             <Box className={"hover-line"}>
               <NavLink to="/help" activeClassName={"underline"}>Help</NavLink>
             </Box>
+          </Stack>
+          <Stack className="other-nav-actions">
             <Basket 
              cartItems={cartItems}
             onAdd={onAdd}

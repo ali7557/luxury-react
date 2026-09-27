@@ -23,6 +23,20 @@ export default function HelpPage() {
 
   return (
     <div className={"help-page"}>
+      <section className={"help-hero"}>
+        <div className={"help-hero-inner"}>
+          <div className={"help-hero-copy"}>
+            <h1>How Can We Help?</h1>
+            <span aria-hidden={"true"} />
+            <p>Find answers, support, and guidance for your luxury experience.</p>
+          </div>
+          <img
+            className={"help-hero-image"}
+            src={"/img/watch3.jpg"}
+            alt={"Luxury watch support"}
+          />
+        </div>
+      </section>
       <Container className={"help-container"}>
         <TabContext value={value}>
           <Box className={"help-menu"}>

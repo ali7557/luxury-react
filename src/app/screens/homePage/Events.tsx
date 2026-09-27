@@ -27,7 +27,7 @@ export default function Events() {
         <Swiper
           className={"events-info swiper-wrapper"}
           slidesPerView={3}
-          spaceBetween={30} // Adds breathing room between watch frames
+          spaceBetween={24}
           centeredSlides={true}
           loop={true}
           autoplay={{
