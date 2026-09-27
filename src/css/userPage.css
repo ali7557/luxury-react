@@ -3,8 +3,43 @@
   width: 100%;
   height: auto;
   display: flex;
-  background: #0b1114;
-  padding: 50px 0;
+  flex-direction: column;
+  background: #f2eee6;
+  padding: 0 0 50px;
+}
+
+.user-page .user-account-header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f2eee6;
+  color: #10202b;
+  box-sizing: border-box;
+}
+
+.user-page .user-account-header h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.user-page .user-account-header span {
+  width: 42px;
+  height: 1px;
+  margin-top: 14px;
+  background: #b88a44;
+}
+
+.user-page .user-account-header p {
+  margin: 12px 0 0;
+  color: #5f6b73;
+  font: 400 13px/1.5 "Poppins", sans-serif;
+  letter-spacing: .025em;
 }
 
 .user-page .css-heg063-MuiTabs-flexContainer {
@@ -41,11 +76,11 @@
   height: 70px;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #1c262a;
+  border-bottom: 1px solid rgba(16, 32, 43, 0.10);
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 45px;
-  color: #d7b586;
+  color: #b88a44;
 }
 
 /* --- Settings Form (Styled as the Box) --- */
@@ -54,11 +89,11 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  background: #151d21; /* Added Box Background */
+  background: #fbf8f2; /* Added Box Background */
   padding: 40px;      /* Added Padding */
   border-radius: 16px;/* Added Rounded Corners */
-  border: 1px solid #333;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(16, 32, 43, 0.10);
+  box-shadow: 0 10px 24px rgba(16, 32, 43, 0.08);
   margin-top: 20px;
 }
 
@@ -80,7 +115,7 @@
 .user-page .settings .spec-label {
   font-family: 'Source Serif Pro', serif;
   font-size: 16px;
-  color: #d7b586;
+  color: #b88a44;
 }
 
 .user-page .settings .spec-input,
@@ -89,11 +124,11 @@
   margin-top: 10px;
   padding: 20px;
   width: 100%;
-  border: 1px solid #333;
-  background: #0b1114; /* Input Field Background */
+  border: 1px solid rgba(16, 32, 43, 0.10);
+  background: #e8e1d7; /* Input Field Background */
   border-radius: 5px;
   font-family: 'GT Walsheim Pro', sans-serif;
-  color: #ffffff;
+  color: #10202b;
 }
 
 .user-page .settings .spec-textarea {
@@ -123,20 +158,20 @@
 
 .user-page .settings .media-change-box span {
   font-family: 'GT Walsheim Pro', sans-serif;
-  color: #d7b586;
+  color: #b88a44;
 }
 
 .user-page .settings .media-change-box p {
   margin: 10px 0px 14px 0px;
-  color: #a0a0a0;
+  color: #5f6b73;
 }
 
 .user-page .settings .up-del-box {
   width: 37px;
   height: 37px;
   display: flex;
-  background: #151d21;
-  border: 1px solid #333;
+  background: #e8e1d7;
+  border: 1px solid rgba(16, 32, 43, 0.10);
   border-radius: 8px;
   justify-content: center;
   align-items: center;
@@ -165,9 +200,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #151d21;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid #333;
+  background: #fbf8f2;
+  box-shadow: 0 10px 24px rgba(16, 32, 43, 0.08);
+  border: 1px solid rgba(16, 32, 43, 0.10);
   border-radius: 16px;
 }
 
@@ -200,7 +235,7 @@
   top: 81%;
   right: 0;
   display: flex;
-  background: rgb(209 209 209 / 33%);
+  background: #e8e1d7;
   border-radius: 37px;
 }
 
@@ -209,14 +244,14 @@
   font-family: 'Commissioner', sans-serif;
   font-weight: 500;
   font-size: 28px;
-  color: #ffffff;
+  color: #10202b;
 }
 
 .user-page .order-info-box .order-user-prof {
   font-family: 'Commissioner', sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: #d7b586;
+  color: #b88a44;
 }
 
 .user-page .order-info-box .user-media-box {
@@ -233,7 +268,7 @@
   display: flex;
   justify-content: center;
   font-family: 'DM Sans', sans-serif;
-  color: #a0a0a0;
+  color: #5f6b73;
 }
 
 .user-page .order-info-box .css-1e3kzd4-MuiButtonBase-root-MuiButton-root {
@@ -243,7 +278,7 @@
   text-transform: capitalize;
   font-weight: 600;
   font-size: 25px;
-  color: #ffffff;
+  color: #10202b;
 }
 
 .user-page .menu-box img {
@@ -255,5 +290,5 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 25px;
-  color: #ffffff;
+  color: #10202b;
 }

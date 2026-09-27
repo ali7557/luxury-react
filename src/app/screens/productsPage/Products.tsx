@@ -95,24 +95,28 @@ export default function Products(props: ProductsProps) {
 
   return (
     <div className={"products"}>
-          <Stack className={"product-catalog-hero"}>
+          <section className={"product-catalog-hero"}>
             <div className={"catalog-hero-main"}>
-          <Stack className={"avatar-big-box"}>
-            <Stack className={"top-text"}>
-              <p>LUXURY COLLECTION</p>
-              <span className={"catalog-title-accent"} aria-hidden={"true"} />
-              <span className={"catalog-subtitle"}>
-                Discover exceptional timepieces and curated luxury pieces.
-              </span>
-            </Stack>
-          </Stack>
-              <img
-                className={"catalog-hero-image"}
-                src={"/img/watch2.jpg"}
-                alt={"Luxury watch collection"}
-              />
+              <div className={"catalog-hero-media"}>
+                <img
+                  className={"catalog-hero-image"}
+                  src={"/img/watch2.jpg"}
+                  alt={"Luxury watch collection"}
+                />
+              </div>
+              <Container maxWidth={false} disableGutters className={"catalog-hero-content-container"}>
+                <Box className={"catalog-hero-layout"}>
+                  <Stack className={"top-text"}>
+                    <p>LUXURY COLLECTION</p>
+                    <span className={"catalog-title-accent"} aria-hidden={"true"} />
+                    <span className={"catalog-subtitle"}>
+                      Discover exceptional timepieces and curated luxury pieces.
+                    </span>
+                  </Stack>
+                </Box>
+              </Container>
             </div>
-          </Stack>
+          </section>
       <Container>
         <Stack flexDirection={"column"} alignItems={"center"}>
             <Stack className={"catalog-hero-controls"}>

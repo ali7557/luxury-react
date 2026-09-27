@@ -17,6 +17,11 @@ export default function UserPage() {
   if(!authMember) history.push("/");
   return (
     <div className={"user-page"}>
+      <section className={"user-account-header"}>
+        <h1>My Account</h1>
+        <span aria-hidden={"true"} />
+        <p>Manage your profile, account details, and preferences.</p>
+      </section>
       <Container>
         <Stack className={"my-page-frame"}>
           <Stack className={"my-page-left"}>

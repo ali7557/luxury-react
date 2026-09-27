@@ -1,5 +1,6 @@
 
-import React, {ReactNode, useState} from "react"
+import React, {useState} from "react"
+import type { ReactNode } from "react"
 import Cookies from "universal-cookie"
 import { GlobalContext } from "../hooks/useGlobal";
 import { Member } from "../../lib/types/member";

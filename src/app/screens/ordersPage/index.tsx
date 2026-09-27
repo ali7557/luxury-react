@@ -74,6 +74,11 @@ const [orderInquiry ,setOrderInquiry] = useState<OrderInquiry>({
 
   return (
     <div className="order-page">
+      <section className="order-account-header">
+        <h1>Your Orders</h1>
+        <span aria-hidden="true" />
+        <p>Track and manage your luxury purchases.</p>
+      </section>
       <Container className="order-container">
         {/* LEFT SIDE: Tabs and Order Lists */}
         <Stack className="order-left">

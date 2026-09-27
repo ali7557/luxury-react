@@ -109,7 +109,13 @@ export default function HomeNavbar(props: any) {
       </MenuItem>
     </Menu>
 </Stack>
-        <Box className="hero-layout">
+      </Container>
+      <Box className="hero-shell">
+        <Box className="hero-media">
+          <Box component="img" className="hero-watch" src="/img/watch.jpg" alt="Luxury watches" />
+        </Box>
+        <Container maxWidth={false} disableGutters className="hero-content-container">
+          <Box className="hero-layout">
           <Stack className="hero-copy" spacing={0}>
             <Typography component="h1" className="hero-headline">
               IN PURSUIT OF<br />PERFECTION
@@ -125,12 +131,9 @@ export default function HomeNavbar(props: any) {
               )}
             </Box>
           </Stack>
-
-          <Box className="hero-media">
-            <Box component="img" className="hero-watch" src="/img/watch.jpg" alt="Luxury watches" />
-          </Box>
         </Box>
-      </Container>
+        </Container>
+      </Box>
     </Box>
   );
 }

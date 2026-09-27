@@ -28,7 +28,10 @@ export default function OtherNavbar(props: OtherNavbarProps) {
   const {authMember} = useGlobals();
   const location = useLocation();
   const usesLightNavbar =
-    location.pathname.startsWith("/products") || location.pathname.startsWith("/help");
+    location.pathname.startsWith("/products") ||
+    location.pathname.startsWith("/help") ||
+    location.pathname.startsWith("/orders") ||
+    location.pathname.startsWith("/member-page");
   return (
     <div className={`other-navbar${usesLightNavbar ? " products-navbar" : ""}`}>
       <Container className="navbar-container">

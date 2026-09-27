@@ -25,16 +25,22 @@ export default function HelpPage() {
     <div className={"help-page"}>
       <section className={"help-hero"}>
         <div className={"help-hero-inner"}>
-          <div className={"help-hero-copy"}>
-            <h1>How Can We Help?</h1>
-            <span aria-hidden={"true"} />
-            <p>Find answers, support, and guidance for your luxury experience.</p>
+          <div className={"help-hero-media"}>
+            <img
+              className={"help-hero-image"}
+              src={"/img/watch3.jpg"}
+              alt={"Luxury watch support"}
+            />
           </div>
-          <img
-            className={"help-hero-image"}
-            src={"/img/watch3.jpg"}
-            alt={"Luxury watch support"}
-          />
+          <Container maxWidth={false} disableGutters className={"help-hero-content-container"}>
+            <Box className={"help-hero-layout"}>
+              <Stack className={"help-hero-copy"}>
+                <h1>How Can We Help?</h1>
+                <span aria-hidden={"true"} />
+                <p>Find answers, support, and guidance for your luxury experience.</p>
+              </Stack>
+            </Box>
+          </Container>
         </div>
       </section>
       <Container className={"help-container"}>

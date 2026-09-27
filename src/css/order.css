@@ -2,12 +2,46 @@
 .order-page {
   width: 100%;
   height: auto;
-background: #0b1114;
+background: #f2eee6;
   display: flex;
+  flex-direction: column;
 }
 
+.order-page .order-account-header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f2eee6;
+  color: #10202b;
+  box-sizing: border-box;
+}
+
+.order-page .order-account-header h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.order-page .order-account-header span {
+  width: 42px;
+  height: 1px;
+  margin-top: 14px;
+  background: #b88a44;
+}
+
+.order-page .order-account-header p {
+  margin: 12px 0 0;
+  color: #5f6b73;
+  font: 400 13px/1.5 "Poppins", sans-serif;
+  letter-spacing: .025em;
+}
 .order-page .order-container {
-  margin-top: 50px;
+  margin-top: 32px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
@@ -40,13 +74,13 @@ flex-direction: column;
 
 align-items: center;
 
-background: #ffffff; /* Cleaner, brighter white */
+background: #fbf8f2;
 
 box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Softer, modern luxury shadow */
 
 border-radius: 20px;
 
-border: 1px solid #f0f0f0;
+border: 1px solid rgba(16, 32, 43, 0.10);
 
 margin-bottom: 25px;
 
@@ -62,7 +96,7 @@ align-items: center;
 
 width: 100%;
 
-border: 0.5px solid #ececec; /* Subtler divider line */
+border: 0.5px solid rgba(16, 32, 43, 0.10);
 
 margin-top: 30px;
 
@@ -88,7 +122,7 @@ object-fit: cover;
 
 border-radius: 50%; /* Rounded profile for a classic luxury look */
 
-border: 2px solid #d7b586; /* Subtle gold trim */
+border: 2px solid #b88a44; /* Subtle gold trim */
 
 padding: 3px;
 
@@ -102,7 +136,7 @@ font-weight: 600;
 
 font-size: 24px;
 
-color: #1a1a1a;
+color: #10202b;
 
 }.order-page .order-info-box .order-user-prof {
 
@@ -114,7 +148,7 @@ letter-spacing: 1px;
 
 text-transform: uppercase;
 
-color: #b17015; /* Using your accent gold color */
+color: #b88a44;
 
 }/* --- INPUT FIELDS & CARDS --- */.order-page .order-info-box .card-input,.order-page .order-info-box .card-half-input {
 
@@ -124,9 +158,9 @@ padding: 12px 15px;
 
 width: 100%;
 
-background: #fcfcfc; /* Very light, premium background */
+background: #e8e1d7;
 
-border: 1px solid #e0e0e0;
+border: 1px solid rgba(16, 32, 43, 0.10);
 
 border-radius: 8px;
 
@@ -134,7 +168,7 @@ font-family: 'Poppins', sans-serif;
 
 font-size: 14px;
 
-color: #333;
+color: #10202b;
 
 transition: border 0.3s ease;
 
@@ -142,7 +176,7 @@ box-sizing: border-box;
 
 }.order-page .order-info-box .card-input:focus,.order-page .order-info-box .card-half-input:focus {
 
-border-color: #d7b586; /* Highlight border with your gold color on focus */
+border-color: #b88a44;
 
 outline: none;
 
@@ -170,18 +204,45 @@ min-width: 0;
 /* =================== LEFT NAV (TABS) =================== */
 .order-page .order-left .order-nav-frame {
   width: 100%;
-  height: 60px;
+  height: 48px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-bottom: 1px solid #f8f8ff;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(16, 32, 43, 0.10);
+  background: #e8e1d7;
 }
 
 
 .order-page .order-left .order-nav-frame .table-list,
 .order-page .order-left .order-nav-frame .table_list {
-  display: flex;
-  justify-content: space-between;
+  width: auto;
+  min-height: 40px;
+}
+
+.order-page .order-left .order-nav-frame .MuiTabs-flexContainer {
+  gap: 30px;
+}
+
+.order-page .order-left .order-nav-frame .MuiTab-root {
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 4px;
+  color: #10202b;
+  font: 500 10px/1 "Poppins", sans-serif;
+  letter-spacing: .12em;
+}
+
+.order-page .order-left .order-nav-frame .MuiTab-root.Mui-selected {
+  color: #b88a44;
+}
+
+.order-page .order-left .order-nav-frame .MuiTabs-indicator {
+  height: 1px;
+  background: #b88a44;
+}
+
+.order-page .order-left .order-nav-frame > .MuiBox-root {
+  border-bottom: 0;
 }
 
 .order-page .css-lgsv261 {
@@ -200,11 +261,11 @@ min-width: 0;
   width: 100%;
   max-height: 285px;
   margin-bottom: 25px;
-  background: #0b1114; 
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-  border: 1px solid #333;
+  background: #fbf8f2;
+  box-shadow: 0 10px 30px rgba(16, 32, 43, 0.08);
+  border: 1px solid rgba(16, 32, 43, 0.10);
   border-radius: 12px;
-  color: #d7b586;
+  color: #10202b;
 }
 
 .order-page .order-main-content .order-main-box .order-box-scroll {
@@ -225,7 +286,7 @@ min-width: 0;
 }
 
 .order-page .order-main-content .order-main-box .order-box-scroll::-webkit-scrollbar-thumb {
-  background-color: #d7b586;
+  background-color: #b88a44;
   border-radius: 5px;
 }
 
@@ -257,7 +318,7 @@ min-width: 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 36px;
-  color: #ffffff;
+  color: #10202b;
 }
 
 .order-page .order-box-scroll .orders-name-price .price-box {
@@ -277,7 +338,7 @@ min-width: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 27px;
-  color: #d7b586;
+  color: #b88a44;
 }
 
 .order-page .order-main-content .order-main-box .total-price-box {
@@ -291,28 +352,28 @@ min-width: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between; /* Better distribution */
-  background: #151d21;
-  border-top: 1px solid #333;
+  background: #e8e1d7;
+  border-top: 1px solid rgba(16, 32, 43, 0.10);
   box-sizing: border-box;
 }
 
 .order-page .order-main-content .total-price-box .cancel-button {
   border-radius: 10px;
   background: transparent;
-  color: #d7b586;
-  border: 1px solid #d7b586;
+  color: #b88a44;
+  border: 1px solid #b88a44;
   max-height: 40px;
   transition: 0.3s;
 }
 
 .order-page .order-main-content .total-price-box .cancel-button:hover {
-  background: #d7b586;
-  color: #0b1114;
+  background: #b88a44;
+  color: #10202b;
 }
 
 .order-page .order-main-content .total-price-box .pay-button {
-  background: #d7b586;
-  color: #0b1114;
+  background: #b88a44;
+  color: #10202b;
   border-radius: 10px;
   max-height: 40px;
   font-weight: 600;
@@ -320,9 +381,9 @@ min-width: 0;
 }
 
 .order-page .order-main-content .total-price-box .verify-button {
-  background: #1a2226;
-  color: #d7b586;
-  border: 1px solid #d7b586;
+  background: #fbf8f2;
+  color: #b88a44;
+  border: 1px solid #b88a44;
   border-radius: 10px;
 }
 
@@ -342,6 +403,6 @@ min-width: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 12px; /* Slightly smaller to prevent wrapping */
   line-height: 1.4;
-  color: #d7b586;
+  color: #10202b;
   text-transform: uppercase;
 }

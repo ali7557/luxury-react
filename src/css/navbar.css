@@ -3,27 +3,24 @@
 /* Homepage header and hero: single source of truth */
 .home-navbar {
   width: 100%;
-  height: 750px;
-  min-height: 750px;
   margin: 0;
   position: relative;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   background: #05090d;
 }
 
-.home-navbar .home-nav-container {
+.home-navbar .home-nav-container,
+.home-navbar .hero-content-container {
   width: 100%;
   max-width: 1500px;
-  height: 100%;
   margin: 0 auto;
-  padding: 0 64px;
+  padding-inline: 64px;
+  box-sizing: border-box;
+}
+
+.home-navbar .home-nav-container {
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
 }
 
 .home-navbar .home-nav-menu {
@@ -120,17 +117,30 @@
 
 .home-navbar #basic-button img { filter: brightness(0); }
 
-.home-navbar .hero-layout {
-  width: 100%;
-  flex: 1;
-  min-height: 0;
-  padding: 36px 0 48px;
-  display: flex;
-  align-items: center;
+.home-navbar .hero-shell {
+  position: relative;
+  width: min(100%, 1500px);
+  aspect-ratio: 1440 / 671;
+  margin-inline: auto;
+  overflow: hidden;
+  background: #05090d;
+}
+
+.home-navbar .hero-content-container {
   position: relative;
   z-index: 1;
-  box-sizing: border-box;
+  height: 100%;
+}
+
+.home-navbar .hero-layout {
+  width: 100%;
+  height: 100%;
   margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .home-navbar .hero-copy {
@@ -157,7 +167,7 @@
   margin: 0;
   color: #f4f1ea;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(54px, 4vw, 64px);
+  font-size: 58px;
   font-weight: 300;
   line-height: .98;
   letter-spacing: .01em;
@@ -168,7 +178,7 @@
   margin: 16px 0 0;
   color: #b88a44;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(19px, 1.4vw, 22px);
+  font-size: 20px;
   font-style: italic;
   font-weight: 300;
   line-height: 1.2;
@@ -225,31 +235,22 @@
 
 .home-navbar .hero-media {
   position: absolute;
-  top: 0;
-  right: auto;
-  bottom: 0;
-  left: 50%;
-  width: 100vw;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: hidden;
-  transform: translateX(-50%);
+  inset: 0;
   z-index: 0;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .home-navbar .hero-watch {
   display: block;
   width: 100%;
   height: 100%;
-  max-height: none;
+  max-width: 1500px;
   object-fit: cover;
   object-position: center right;
   border: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 .home-navbar .home-nav-login.MuiButton-root {
   width: 128px;
@@ -287,11 +288,10 @@
 }
 
 @media (max-width: 1100px) {
-  .home-navbar {
-    height: 680px;
-    min-height: 660px;
-  }
-  .home-navbar .home-nav-container { padding: 0 32px; }
+  .home-navbar .home-nav-container,
+  .home-navbar .hero-content-container { padding-inline: 32px; }
+
+  .home-navbar .hero-watch { max-width: none; }
   .home-navbar .home-nav-menu {
     grid-template-columns: 1fr auto 1fr;
     column-gap: 0;
@@ -301,15 +301,13 @@
   .home-navbar .home-nav-link a { font-size: 14px; }
   .home-navbar .hero-copy { max-width: 480px; }
   .home-navbar .hero-headline.MuiTypography-root { font-size: clamp(48px, 5.5vw, 60px); }
+  .home-navbar .hero-subtitle.MuiTypography-root { font-size: 19px; }
   .home-navbar .hero-watch { object-position: 68% center; }
 }
 
 @media (max-width: 760px) {
-  .home-navbar {
-    height: 600px;
-    min-height: 560px;
-  }
-  .home-navbar .home-nav-container { padding: 0 16px; }
+  .home-navbar .home-nav-container,
+  .home-navbar .hero-content-container { padding-inline: 16px; }
   .home-navbar .home-nav-menu {
     height: 64px;
     min-height: 64px;
@@ -319,25 +317,13 @@
   .home-navbar .home-nav-center { gap: 12px; }
   .home-navbar .home-nav-actions { gap: 12px; }
   .home-navbar .home-nav-link { display: none; }
-  .home-navbar .hero-layout {
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-  }
+
   .home-navbar .hero-copy {
     max-width: 360px;
     padding-left: 0;
   }
   .home-navbar .hero-headline.MuiTypography-root { font-size: clamp(40px, 11vw, 52px); }
-  .home-navbar .hero-media {
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: 50%;
-    width: 100vw;
-    height: auto;
-    justify-content: flex-end;
-  }
+
   .home-navbar .hero-watch { width: 100%; object-position: 64% center; }
   .home-navbar .signup-button.MuiButton-root { width: 158px; height: 44px; }
 }
@@ -428,6 +414,7 @@
   width: 100%;
   max-width: 1500px;
   height: 100%;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 64px;
   box-sizing: border-box;
@@ -661,6 +648,7 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+  max-width: 1500px;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
