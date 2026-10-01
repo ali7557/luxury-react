@@ -14,7 +14,7 @@ services:
     working_dir: /app
 
     environment:
-      REACT_APP_API_URL: /api
+      REACT_APP_API_URL: http://localhost:4011
 
     command: >
       sh -c "corepack enable &&
