@@ -191,11 +191,11 @@
     box-shadow: none;
 }
 
-.products-page .products .dishes-filter-section {
+.products-page .products .products-filter-section {
     margin-top: 10px;
 }
 
-.dishes-filter-box {
+.products-filter-box {
     display: flex !important;
     flex-direction: row !important;
     width: auto !important;
@@ -634,7 +634,7 @@
     color: #000000;
 }
 
-.products-page .chosen-product .info-box .resto-name {
+.products-page .chosen-product .info-box .stock-count {
     margin-top: 16px;
     font-family: "Poppins";
     font-style: normal;

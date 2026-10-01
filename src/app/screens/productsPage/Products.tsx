@@ -90,7 +90,7 @@ export default function Products(props: ProductsProps) {
   setProductSearch({ ...productSearch });
   };
 
-  const chooseDishHandler =(id: string) => {history.push(`/products/${id}`);};
+  const chooseProductHandler =(id: string) => {history.push(`/products/${id}`);};
 
 
   return (
@@ -142,8 +142,8 @@ export default function Products(props: ProductsProps) {
                 </Button>
               </Stack>
 
-                <Stack className={"dishes-filter-section"}>
-                  <Stack className={"dishes-filter-box"}>
+                <Stack className={"products-filter-section"}>
+                  <Stack className={"products-filter-box"}>
                     <Button
                       variant={"contained"}
                       className={"order"}
@@ -248,7 +248,7 @@ export default function Products(props: ProductsProps) {
                               product.productCollection === ProductCollection.WATCHES ? product.productViews + "  " : product.productSize + "size";
                                 return (
                                     <Stack key={product._id} className={"product-card"}
-                                    onClick={() => chooseDishHandler(product._id)}>
+                                    onClick={() => chooseProductHandler(product._id)}>
                                         <Stack
                                         className={"product-img"}
                                         sx={{backgroundImage: `url(${imagePath})`}}

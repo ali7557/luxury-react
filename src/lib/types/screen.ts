@@ -15,9 +15,8 @@ export interface AppRootState {
 /** HOMEPAGE **/
 
 export interface HomePageState {
-    products: never[];
-    popularDishes:  Product[];
-    newDishes:Product[];
+    popularProducts: Product[];
+    newProducts: Product[];
     topUsers: Member [];
 }
 
@@ -25,7 +24,6 @@ export interface HomePageState {
 /** PRODUCT PAGE **/
 
 export interface ProductPageState {
-    restaurant: Member | null;
     chosenProduct: Product | null ;
     products: Product[];
 }

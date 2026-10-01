@@ -1,3 +1,29 @@
+# Luxury frontend production build
+
+Use Yarn Classic 1.22.22 and the committed yarn.lock:
+
+```sh
+yarn install --frozen-lockfile
+yarn build
+```
+
+The output is `build/`. TypeScript errors must be fixed; do not enable
+`TSC_COMPILE_ON_ERROR`.
+
+`REACT_APP_API_URL` is public configuration embedded by Create React App at
+build time, not a runtime setting. The default `/api` requires the production
+web server to proxy `/api/` to the backend, stripping the `/api` prefix (including
+uploaded image requests). Alternatively, set it to the externally reachable
+backend URL before building, for example `https://api.example.com`. Cross-origin
+requests require backend CORS to allow the frontend origin and credentials.
+Never use a Docker-only service hostname as the browser's API URL. Rebuild after
+changing this variable. Trailing slashes are normalized by `src/lib/config.ts`.
+
+Keep local development API settings in ignored `.env.development.local`, which
+is not loaded for production builds. Do not put secrets in `REACT_APP_*` values.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.

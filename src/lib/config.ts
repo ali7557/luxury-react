@@ -1,4 +1,7 @@
-export const serverApi: string = `${process.env.REACT_APP_API_URL}`;
+// CRA embeds this public value at build time. /api requires a reverse proxy.
+export const serverApi: string = (process.env.REACT_APP_API_URL || "/api")
+    .trim()
+    .replace(/\/+$/, "");
 
 export const Messages = {
     error1: "Something went wrong !",

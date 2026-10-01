@@ -3,8 +3,8 @@ import "../../../css/home.css"
 import ActiveUsers from './ActiveUsers'
 import Advertisement from './Advertisement'
 import Events from './Events'
-import NewDishes from './NewDishes'
-import PopularDishes from './PopularDishes'
+import NewCollection from './NewCollection'
+import PopularWatches from './PopularWatches'
 import Statistics from './Statistics'
 
 
@@ -15,18 +15,18 @@ import { Member } from '../../../lib/types/member'
 import { Product } from '../../../lib/types/product'
 import MemberService from '../../services/MemberService'
 import ProductService from '../../services/ProductService'
-import { setNewDishes, setPopularDishes, setTopUsers } from './slice'
+import { setNewProducts, setPopularProducts, setTopUsers } from './slice'
 /** Redux Slice & Selector **/
 const actionDispatch = (dispatch: Dispatch)=>({
-  setPopularDishes:(data:Product[])=>dispatch(setPopularDishes(data)),
-  setNewDishes:(data:Product[])=> dispatch(setNewDishes(data)),
+  setPopularProducts:(data:Product[])=>dispatch(setPopularProducts(data)),
+  setNewProducts:(data:Product[])=> dispatch(setNewProducts(data)),
   setTopUsers:(data: Member[]) => dispatch(setTopUsers(data))
 });
 
 
 
 export  default function HomePage() {
-  const { setPopularDishes, setNewDishes, setTopUsers } = actionDispatch(useDispatch());
+  const { setPopularProducts, setNewProducts, setTopUsers } = actionDispatch(useDispatch());
 
 
 
@@ -40,9 +40,9 @@ export  default function HomePage() {
         productCollection: ProductCollection.WATCHES,
       }).then((data)=>{
         console.log("Data passed here:", data);
-        setPopularDishes(data);
+        setPopularProducts(data);
       }).catch((err) => console.log(err));
-        console.log("Error fetching dishes:");
+        console.log("Error fetching popular products:");
       product.getProducts({
         page: 1,
         limit: 4,
@@ -50,7 +50,7 @@ export  default function HomePage() {
         productCollection: ProductCollection.WATCHES,
       }).then((data)=>{
         console.log("Data passed here:", data);
-        setNewDishes(data);
+        setNewProducts(data);
       }).catch((err) => console.log(err));
 
       const member = new MemberService();
@@ -66,8 +66,8 @@ export  default function HomePage() {
 
   return <div className={'homepage'}>
     <Statistics />
-    <PopularDishes />
-    <NewDishes />
+    <PopularWatches />
+    <NewCollection />
     <Advertisement />
     <ActiveUsers />
     <Events />

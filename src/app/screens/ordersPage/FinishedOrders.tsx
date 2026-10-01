@@ -64,8 +64,8 @@ export default function FinishedOrders() {
 
                 return (
                   <Box key={item._id} className={"orders-name-price"}>
-                    <img src={imagePath} className="order-dish-img" alt="dish" />
-                    <p className="title-dish">{product?.productName}</p>
+                    <img src={imagePath} className="order-product-img" alt="Product" />
+                    <p className="title-product">{product?.productName}</p>
                     <Box className="price-box">
                       <p>${item.itemPrice}</p>
                       <img src={"/icons/close.svg"} alt="close" />

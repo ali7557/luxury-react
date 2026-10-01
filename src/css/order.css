@@ -300,7 +300,7 @@ min-width: 0;
   align-items: center;
 }
 
-.order-page .order-box-scroll .orders-name-price .order-dish-img {
+.order-page .order-box-scroll .orders-name-price .order-product-img {
   position: relative;
   width: 50px;
   height: 47px;
@@ -308,7 +308,7 @@ min-width: 0;
   background-size: cover;
 }
 
-.order-page .order-box-scroll .orders-name-price .title-dish {
+.order-page .order-box-scroll .orders-name-price .title-product {
   position: relative;
   width: 260px;
   height: 36px;

@@ -1,0 +1,27 @@
+services:
+  luxury-frontend:
+    container_name: luxury-frontend
+    restart: unless-stopped
+    image: node:20
+
+    ports:
+      - "4010:3000"
+
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+    working_dir: /app
+
+    environment:
+      REACT_APP_API_URL: /api
+
+    command: >
+      sh -c "corepack enable &&
+      corepack prepare yarn@1.22.22 --activate &&
+      yarn install --frozen-lockfile &&
+      yarn start"
+
+networks:
+  default:
+    name: luxury-frontend-network

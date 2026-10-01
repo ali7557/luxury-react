@@ -8,7 +8,6 @@ import ProductsPage from './screens/productsPage';
 import UsersPage from './screens/userPage';
 import Footer from './components/footer';
 import HelpPage from './screens/helpPage';
-import Test from './screens/Test';
 import useBasket from './hooks/useBasket';
 import AuthenticationModal from './components/auth';
 import '../css/app.css';

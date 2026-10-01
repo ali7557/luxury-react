@@ -26,21 +26,6 @@ console.log("getTopUsers DATA:", result.data);
 
 
     
-    public async getBrandData(): Promise<Member> {
-        try {
-            const url = this.path + "/member/restaurant"
-            const result = await axios.get(url);
-            console.log("getBrandData:", result)
-
-           const restaurant: Member = result.data;
-           return restaurant;
-        } catch (err) {
-            console.log("Error, getBrandData:", err);
-            throw err;
-        }
-    }
-
-
 public async signUp(input: MemberInput): Promise<Member> {
     try {
       const url = this.path + "/member/signup";

@@ -81,10 +81,10 @@ export default function ProcessOrders(props: ProcessOrdersProps) {
                   <Box key={item._id} className={"orders-name-price"}>
                     <img
                       src={imagePath}
-                      className={"order-dish-img"}
+                      className={"order-product-img"}
                       alt="kebab"
                     />
-                    <p className="title-dish">{product.productName}</p>
+                    <p className="title-product">{product.productName}</p>
                     <Box className="price-box">
                     <p>${item.itemPrice}</p>
                       <img src={"/icons/close.svg"} alt="close" />
