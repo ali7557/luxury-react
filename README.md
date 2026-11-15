@@ -1,3 +1,35 @@
+# WAQT — E-commerce Frontend
+
+**React and TypeScript storefront for WAQT**
+
+**Live website:** https://waqtabad.uz
+
+WAQT is an e-commerce application with product discovery, cart workflows, and order interfaces. This repository contains its React frontend.
+
+## Features
+- Product listings, product details, and filtering
+- Shopping cart and order flows
+- Responsive customer-facing pages
+- Client-side state and REST API integration
+
+## Technology
+React 18 · TypeScript · Redux Toolkit · Axios · Material UI · React Router · Swiper
+
+## Architecture
+Browser → React / TypeScript → Redux Toolkit and Axios → Express REST API → MongoDB
+
+The backend source is maintained in the private `ali7557/luxury` repository.
+
+## Local development
+```bash
+yarn install --frozen-lockfile
+yarn start
+```
+
+---
+
+## Original build and deployment documentation
+
 # Luxury frontend production build
 
 Use Yarn Classic 1.22.22 and the committed yarn.lock:
